@@ -27,7 +27,7 @@ categories: python
 Python을 바로바로 활용 할 수 있는 프로젝트 중심의 실습을 진행합니다. 우리 생활 속에서 필요한 것들을 찾아보고 작은 것 부터 하나 하나 프로그래밍을 통해 다같이 해결해 보는 것 말이죠.
 
 - Python으로 표현하기
-- Python를 통해 요리하기
+- Python으로 요리하기
 - 작은 프로젝트 시작하기
 - Python Module을 활용한 한 <> 영 번역 프로그램
 - 페이스북 메신저와 Ping-pong Chatbot 만들기
