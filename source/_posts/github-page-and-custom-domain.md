@@ -46,8 +46,8 @@ A Record | @ | 192.30.252.153
 A Record | @ | 192.30.252.154
 CName Record | www | USERNAME.github.io
 
-> A Record는 Domain을 물리적인 IP 주소로 연결 할 수 있도록 합니다. 192.30.252.153, 192.30.252.154는 Github Page의 Static Page를 관리하는 IP입니다.
-CName은 물리적인 IP 주소가 아닌 다른 Domain을 연결 합니다. 대상 Domain의 IP의 변경 내역을 알 필요가 없습니다.
+- `A Record`는 Domain을 물리적인 IP 주소로 연결 할 수 있도록 합니다. 192.30.252.153, 192.30.252.154는 Github Page의 Static Page를 관리하는 IP입니다.
+- `CName`은 물리적인 IP 주소가 아닌 다른 Domain을 연결 합니다. 대상 Domain의 IP의 변경 내역을 알 필요가 없습니다.
 
 <div class='tip'>
 혹시 Github Pages와 Hexo를 통해 블로그를 만들었는데 위의 모든 과정을 진행 하였음에도 불구하고 CNAME 파일이 원하는대로 생성되지 않았나요?
@@ -74,7 +74,7 @@ plugins:
 url: https://www.holaxprogramming.com
 ```
 
-## 참고
+#### 참고
 
 - https://blog.cloudflare.com/secure-and-fast-github-pages-with-cloudflare/
 - https://developer.ubuntu.com/en/blog/2016/02/17/how-host-your-static-site-https-github-pages-and-cloudflare/
