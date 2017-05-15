@@ -47,8 +47,8 @@ Python은 대부분의 프로그래밍 언어가 그렇듯이 컴퓨터가 아�
 Python이라는 프로그래밍 언어를 통해서 우리는 어떻게 컴퓨터와 대화하는지에 대해 살펴봤어요. 지금 당장 따라해보실 필요는 없어요. 다음 강의에서 여러분의 PC의 운영체제에 직접 Python을 설치 해보도록 하겠습니다.
 
 > 영상에서 사용된 소스코드는 아래의 Github 페이지에서 보실 수 있습니다.
-- https://github.com/stunstunstun/holaxprogramming/blob/master/sources/choice_language.py
-- https://github.com/stunstunstun/holaxprogramming/blob/master/sources/languages.txt
+https://github.com/stunstunstun/holaxprogramming/blob/master/sources/choice_language.py
+https://github.com/stunstunstun/holaxprogramming/blob/master/sources/languages.txt
 
 #### 참고
 
