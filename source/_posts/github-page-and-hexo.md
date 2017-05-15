@@ -1,12 +1,12 @@
 ---
-title: Github Page와 Hexo를 통해 30분만에 기술 블로그 만들기
+title: Github Pages와 Hexo를 통해 30분만에 기술 블로그 만들기
 date: 2017-04-16 15:14:40
-desc: 자신의 블로그를 만들어 보는 것 어떠세요?
+desc: 자신의 기술 블로그를 만들어 보는 것 어떠세요?
 image: http://www.ybrikman.com/assets/img/blog/github-pages/github-pages.png
 categories: tutorials
 ---
 
-이 포스팅에서는 GitHub Page를 통해 손쉽게 개발 블로그를 Hosting 해보고 Command Line 명령을 통해 쉽게 블로그를 만들 수 있는 Hexo 프레임워크를 소개하고자 합니다.
+이 포스팅에서는 GitHub Pages를 통해 손쉽게 개발 블로그를 Hosting 해보고 Command Line 명령을 통해 쉽게 블로그를 만들 수 있는 Hexo 프레임워크를 소개하고자 합니다.
 
 <!--more-->
 
@@ -15,11 +15,11 @@ categories: tutorials
 - GitHub Page - https://pages.github.com/
 - Hexo - https://hexo.io/
 
-지금 보고 계시는 블로그 역시 동일한 방법으로 30분 이내에 블로그를 개설 할 수 있었습니다. Git Page와 Hexo를 통해 개인의 기술 관련 문서를 손쉽게 관리하고 알릴 수 있기를 바랍니다.
+지금 보고 계시는 블로그 역시 동일한 방법으로 30분 이내에 블로그를 개설 할 수 있었습니다. Github Pages와 Hexo를 통해 개인의 기술 관련 문서를 손쉽게 관리하고 알릴 수 있기를 바랍니다.
 
-## Git Page로 정적 페이지 Hosting하기
+## Github Pages로 정적 페이지 Hosting하기
 
-Git Page를 통해 손쉽게 USERNAME.github.io 도메인을 통해 정적 페이지를 호스팅(Hosting) 할 수가 있습니다.
+Github Pages를 통해 손쉽게 USERNAME.github.io 도메인을 통해 정적 페이지를 호스팅(Hosting) 할 수가 있습니다.
 
 #### Github Repository 생성하기
 
@@ -119,7 +119,7 @@ permalink_defaults:
 
 #### Github 정보
 
-자신의 Git Page의 Repository 정보를 입력하면 이후에 손쉽게 배포가 가능하다.
+자신의 Repository 정보를 입력하면 이후에 손쉽게 배포가 가능하다.
 
 ```yml
 # Deployment
