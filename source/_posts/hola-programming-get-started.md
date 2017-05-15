@@ -1,6 +1,8 @@
 ---
 title: 스몰스텝, 프로그래밍을 시작하는 작은 습관
 date: 2017-03-03 18:04:11
+desc: 안녕 프로그래밍 기초 강의 소개
+image: http://images.mapsofworld.com/around-the-world/hello-around-the-world.jpg
 categories: python
 ---
 
@@ -8,7 +10,7 @@ categories: python
 
 <!--more-->
 
-<img src='https://cdn.dribbble.com/users/35381/screenshots/2109003/duda_6_loop.gif' width='400' />
+<img src='https://cdn.dribbble.com/users/35381/screenshots/2109003/duda_6_loop.gif' width='500' />
 
 > 그런데 말이죠, 무엇인가를 시작한다는 첫 걸음은 굉장히 위대한 일이라고 생각해요  
 
@@ -20,11 +22,11 @@ categories: python
 
 ## 강의 목차
 
-- [프로그래밍 언어에 대해 소개합니다](http://holaxprogramming.com/2017/03/06/hola-programming-programming-language/)
-- [안녕 Python!](http://holaxprogramming.com/2017/03/14/hola-programming-hola-python/)
-- [운영체제와 Python 설치하기](http://holaxprogramming.com/2017/03/19/hola-programming-installation-python/)
-- [Python으로 표현하기](http://holaxprogramming.com/2017/03/26/hola-programming-python-expression/)
-- [Python으로 요리하기 - 기본 재료들](http://holaxprogramming.com/2017/04/01/hola-programming-python-types/)
+- [프로그래밍 언어에 대해 소개합니다](http://www.holaxprogramming.com/2017/03/04/hola-programming-chapter-01/)
+- [안녕 Python!](http://www.holaxprogramming.com/2017/03/05/hola-programming-chapter-02/)
+- [운영체제와 Python 설치하기](http://www.holaxprogramming.com/2017/03/06/hola-programming-chapter-03/)
+- [Python으로 표현하기](http://www.holaxprogramming.com/2017/03/07/hola-programming-python-chapter-04/)
+- Python으로 요리하기 - 기본 재료들
 - Python으로 요리하기 - 재료를 담는 그릇
 - Python으로 요리하기 - 재료의 상태에 따라 요리의 흐름을 담는 레시피
 - Python으로 요리하기 - 반복되는 일은 도구를 사용하자
@@ -36,7 +38,7 @@ categories: python
 
 ## 안녕 프로그래밍의 목적은 단순해요
 
-<img src='http://images.mapsofworld.com/around-the-world/hello-around-the-world.jpg' width='400' />
+<img src='http://images.mapsofworld.com/around-the-world/hello-around-the-world.jpg' width='500' />
 
 - 프로그래밍을 처음 시작하시는 분들은 스스로 학습 할 수 있는 기초 체력을 만들 수 있습니다.
 - 강의노트와 포함된 동영상을 통해 학습하시면 프로그래밍을 다른 이에게 가르칠 수 있게 됩니다.
@@ -51,7 +53,7 @@ categories: python
 
 저 역시 영어 또는 새로운 언어를 공부하거나, 새로운 기술 등 무엇이 되었던 간에 관심있는 것들을 홀로 시작하게 되었을 때 **"습관"**이 되지 못한체 포기한 적이 많아요. 하지만 관심이 가는 것이 있다면 제 자신에게 질문하는 것을 시작으로 지속적인 동기부여가 필요하다고 생각합니다. 일단 Just Fucking Do It 말이죠.
 
-<img src='http://www.inspectorinsight.com/wp-content/uploads/2014/08/GoldenCircle-08April.013.jpg' width='400' />
+<img src='http://www.inspectorinsight.com/wp-content/uploads/2014/08/GoldenCircle-08April.013.jpg' width='500' />
 
 #### 먼저 그 시작으로 프로그래밍은 왜 배워야 할까요? 이 질문에 대해 함께 이 영상을 보는 것으로 시작했으면 좋겠어요
 
@@ -71,7 +73,7 @@ categories: python
 
 > 그것은 바로, 상상하기
 
-<img src="http://image.toast.com/aaaaahq/apps.png" width="400">
+<img src="http://image.toast.com/aaaaahq/apps.png" width="500">
 
 우리는 무엇인가를 상상하는 것을 시작으로 실제를 만들어내죠. 우리에게 익숙한 예를 들어 볼께요. 바로 여러분 옆에 있는 아이폰 또는 안드로이드폰의 앱들을 살펴보면 모두 우리의 상상에서 부터 시작되었다는 것을 알 수 있습니다.
 

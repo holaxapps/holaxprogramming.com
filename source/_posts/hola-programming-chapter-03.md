@@ -1,14 +1,14 @@
 ---
 title: 운영체제와 Python 설치하기
-date: 2017-03-19 18:07:11
+date: 2017-03-06 18:07:11
+desc: 운영체제는 직접적으로 눈에 보이지는 않지만 애플리케이션이 원활히 작동하는데 아주 큰 역할을 하고 있습니다.
+image: http://substack.net/images/iphone_safari.png
 categories: python
 ---
 
 <img src='http://substack.net/images/iphone_safari.png' />
 
 오늘은 이전 강의에서 Python을 소개하면서 잠시 언급되었던 운영체제에 대해 설명하는 것으로 시작합니다.
-
-> What the... 운영체제는 또 무어란 말인가요?
 
 ## 운영체제(Operating System)
 
@@ -53,13 +53,17 @@ Python은 처음에는 매킨토시(현재의 Mac OSX)라는 운영체제에서 
 
 그러기 위해서는 우리는 Windows, Mac OSX와 같은 운영체제에서 Python을 통해 컴퓨터와의 대화하고 바로 바로 확인 할 수 있는 환경을 만들 필요가 있어요. 아래의 영상에서는 Python을 설치하는 목적을 더 자세히 살펴보도록 할께요.
 
-## [영상] 운영체제와 Python 설치하기
+## [영상] 운영체제와 Python
 
 {% youtube C2hClxeRV2g %}
 
+## [실습] Python 설치하기
+
 {% youtube VawBqHzqKPE %}
 
-#### 참고
 > Python 다운로드 페이지 - https://www.python.org/download
-Solo Learn Python - https://code.sololearn.com/#py
+
+#### 참고
+
+> Solo Learn Python - https://code.sololearn.com/#py
 운영체제 추천 도서 - http://www.aladin.co.kr/shop/wproduct.aspx?ItemId=46380306

@@ -1,6 +1,8 @@
 ---
 title: Python으로 표현하기
-date: 2017-03-26 18:21:14
+date: 2017-03-07 18:21:14
+desc: 프로그래밍으로 표현하기
+image: http://substack.net/images/mad_science.png
 categories: python
 ---
 
@@ -8,7 +10,7 @@ categories: python
 
 <!--more-->
 
-<img src='http://substack.net/images/mad_science.png' width='400' />
+<img src='http://substack.net/images/mad_science.png' width='500' />
 
 이 강의가 프로그래밍에 이미 익숙하신 분들에게도 Python을 시작하실 때 작은 도움이 되길 바랍니다.
 
@@ -38,8 +40,6 @@ Python을 바로바로 활용 할 수 있는 프로젝트 중심의 실습을 �
 ## [영상] Python을 통한 실습 목표
 
 {% youtube 4SHxdes_snU %}
-
-<br>
 
 ## [실습] 비만도(BMI) 지수 프로그램
 

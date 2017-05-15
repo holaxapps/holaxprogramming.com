@@ -1,10 +1,12 @@
 ---
 title: 프로그래밍 언어에 대해 소개합니다
-date: 2017-03-06 17:05:02
+date: 2017-03-04 17:05:02
+desc: 그리고 HTML을 통해 무작정 프로그래밍 경험하기
+image: http://www.ethnosproject.org/wp-content/uploads/2016/08/2013-07-12-endangered-languages.jpg
 categories: python
 ---
 
-<img src="https://camo.githubusercontent.com/94163b2ded355b8381c8da59642997a9f4bb3c20/687474703a2f2f7777772e65726e6573747061636b6167696e672e636f6d2f77702d636f6e74656e742f75706c6f6164732f323031352f31322f4550535f636f6d706c6963617465642d616e73776572732e6a7067" width="600">
+<img src="https://camo.githubusercontent.com/94163b2ded355b8381c8da59642997a9f4bb3c20/687474703a2f2f7777772e65726e6573747061636b6167696e672e636f6d2f77702d636f6e74656e742f75706c6f6164732f323031352f31322f4550535f636f6d706c6963617465642d616e73776572732e6a7067" width="500">
 
 > 흠...?
 
@@ -22,7 +24,7 @@ categories: python
 
 > 우선 한 가지 예를 들어 볼까요?
 
-<img src="http://www.ethnosproject.org/wp-content/uploads/2016/08/2013-07-12-endangered-languages.jpg" text-align="center" width="400" />
+<img src="http://www.ethnosproject.org/wp-content/uploads/2016/08/2013-07-12-endangered-languages.jpg" text-align="center" width="500" />
 
 우리는 서로 어떻게 대화하고 있나요? 주변 사람들과 대부분 한국어라는 **언어**를 통해 대화하고 있어요. 한국어를 못하는 외국인 친구가 있다면 영어나 다른 언어로 대화를 해야 될테구요. 마찬가지로 우리는 컴퓨터와 대화하기 위해서는 **컴퓨터가 이해 가능한 언어**가 필요합니다.
 
