@@ -1,10 +1,42 @@
 ---
-title: Java의 변수(Variables)와 자료형(Date Types)
+title: Java의 Constants와 Variables의 삶 들여다보기
 date: 2012-01-05 00:49:31
-categories: python
+categories: java
 ---
 
-## Variables
+## 프로그램을 실행하면 벌어지는 일
+
+## 프로세스
+
+## 간단한 프로그램으로 살펴보기
+
+#### BMI 지수를 구하는 프로그램
+
+```java
+import java.util.Scanner;
+
+public class Main {
+    static final int CARRY_NUM = 10000;
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("신장을 입력하세요(cm) : ");
+        String height = input.nextLine();
+
+        System.out.print("체중을 입력하세요(kg) : ");
+        String weight = input.nextLine();
+
+        float bmi = Float.valueOf(weight) / (Float.valueOf(height) * Float.valueOf(height)) * CARRY_NUM;
+
+        System.out.println(String.format("\n당신의 체질량지수(BMI)는 %.2f 입니다.", bmi));
+    }
+}
+```
+
+## Java의 변수(Variables)와 자료형(Date Types)
+
+#### Variables
 
 프로그래밍을 하면서 어떠한 값을 저장하고 싶은데, 메모리의 물리적 주소를 직접 찾아서 저장 하는 것은 어려운 일이다. 이러한 물리적인 주소를 대신해 Variables을 통해 원하는 값을 쉽게 저장 할 수 있다.
 
@@ -23,6 +55,8 @@ public class Marine {
   }
 }
 ```
+
+## 우리가 표현한 Variables의 삶은 어떠할까요?
 
 #### Instance Variables
 
