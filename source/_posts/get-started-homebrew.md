@@ -1,7 +1,7 @@
 ---
 title: Mac에서는 Homebrew를 통해 패키지를 설치하자
 date: 2016-10-03 11:49:55
-categories: tutorials
+categories: devops
 ---
 
 <img src='http://marketing.yogiyo.co.kr.s3.amazonaws.com/newsletter/test/%EA%B0%9C%EB%B0%9C%EC%9E%90%EC%9A%A9.jpg' />

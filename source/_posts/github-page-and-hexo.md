@@ -3,7 +3,7 @@ title: Github Pages와 Hexo를 통해 30분만에 기술 블로그 만들기
 date: 2017-04-16 15:14:40
 desc: 자신의 기술 블로그를 만들어 보는 것 어떠세요?
 image: http://www.ybrikman.com/assets/img/blog/github-pages/github-pages.png
-categories: tutorials
+categories: devops
 ---
 
 이 포스팅에서는 GitHub Pages를 통해 손쉽게 개발 블로그를 Hosting 해보고 Command Line 명령을 통해 쉽게 블로그를 만들 수 있는 Hexo 프레임워크를 소개하고자 합니다.
