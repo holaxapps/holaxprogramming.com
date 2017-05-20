@@ -7,8 +7,6 @@ categories: devops
 ---
 이 포스팅은 [Github Pages와 Hexo를 통해 30분만에 기술 블로그 만들기](http://holaxprogramming.com/2017/04/16/github-page-and-hexo/) 후에 Github Pages에 새로운 Domain을 적용하는 과정을 담고 있습니다. Github Pages를 통해 블로그를 만들고 싶다면 먼저 위의 글을 참고해주세요.
 
-<!--more-->
-
 <img src='https://cdn.dribbble.com/users/14268/screenshots/949452/photo-x2.png' width='500'>
 
 자 그럼 시작해 볼까요, 기본적으로 Github Pages를 통해 정적 페이지(Static Page)를 호스팅(Hosting)하는 경우에는 아래와 같은 도메인(Domain)을 제공 받게 됩니다.
