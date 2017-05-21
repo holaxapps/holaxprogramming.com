@@ -1,7 +1,7 @@
 ---
 title: Mac환경에서 Gradle기반의 Java개발환경 준비하기
 date: 2016-10-04 11:54:07
-categories: devops
+categories: java
 ---
 
 <img src='https://technologyconversations.files.wordpress.com/2014/06/gradle.png' width='500' />

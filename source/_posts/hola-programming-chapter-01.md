@@ -3,7 +3,7 @@ title: 프로그래밍 언어에 대해 소개합니다
 date: 2017-03-04 17:05:02
 desc: 그리고 HTML을 통해 무작정 프로그래밍 경험하기
 image: http://www.ethnosproject.org/wp-content/uploads/2016/08/2013-07-12-endangered-languages.jpg
-categories: python
+categories: 기초강의
 ---
 
 <img src="https://camo.githubusercontent.com/94163b2ded355b8381c8da59642997a9f4bb3c20/687474703a2f2f7777772e65726e6573747061636b6167696e672e636f6d2f77702d636f6e74656e742f75706c6f6164732f323031352f31322f4550535f636f6d706c6963617465642d616e73776572732e6a7067" width="500">

@@ -3,7 +3,7 @@ title: 안녕 Python!
 date: 2017-03-05 18:01:48
 desc: 첫 프로그래밍 언어 선택하기
 image: https://carpedm20.github.io/140min-python/img/python.png
-categories: python
+categories: 기초강의
 ---
 
 <img src="http://www.industryconnect.co.nz/wp-content/uploads/2015/09/prog-languages.png" width="500">

@@ -3,7 +3,7 @@ title: 스몰스텝, 프로그래밍을 시작하는 작은 습관
 date: 2017-03-03 18:04:11
 desc: 안녕 프로그래밍 기초 강의 소개
 image: http://images.mapsofworld.com/around-the-world/hello-around-the-world.jpg
-categories: python
+categories: 기초강의
 ---
 
 개인적으로 무엇인가를 꾸준히 한다는 것은 쉽지 않은 일이라고 생각해요. 새로운 공부를 하거나 새해가 시작되면 모든 사람들은 계획을 짜기 시작하죠. 스스로에게 동기부여를 하지만 처음부터 높은 목표치와 지속적으로 의지 할 곳이 없어 쉽게 포기하게 됩니다.

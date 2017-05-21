@@ -3,7 +3,7 @@ title: Python으로 표현하기
 date: 2017-03-07 18:21:14
 desc: 프로그래밍으로 표현하기
 image: http://substack.net/images/mad_science.png
-categories: python
+categories: 기초강의
 ---
 
 지금까지는 우리가 왜 프로그래밍을 해야 하는가?라는 질문을 시작으로 이론적인 내용들이 주를 이루었습니다. 이번 강의를 시작으로 여러분을 Python을 통해 여러분의 상상을 표현하는 연습을 하게 될 것 입니다.

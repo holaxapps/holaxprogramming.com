@@ -3,7 +3,7 @@ title: 운영체제와 Python 설치하기
 date: 2017-03-06 18:07:11
 desc: 운영체제는 직접적으로 눈에 보이지는 않지만 애플리케이션이 원활히 작동하는데 아주 큰 역할을 하고 있습니다.
 image: http://substack.net/images/iphone_safari.png
-categories: python
+categories: 기초강의
 ---
 
 <img src='http://substack.net/images/iphone_safari.png' />
