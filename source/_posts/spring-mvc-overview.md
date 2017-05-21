@@ -32,21 +32,24 @@ categories: spring-framework
 
 mvc namespace에 대한 한가지 예로는 아래와 같이 비지니스 로직이 없는 단순한 정적 페이지를 위해서 Controller 클래스 생성 없이 설정 가능하다는 것 입니다.
 
+```
+GET
+/event/thanks
+```
+
 ```xml
 <mvc:view-controller path="/event/thanks" view-name="/event/thanks"/>
 ```
 
-지금까지 Spring MVC를 통해 직접 구현하고 테스트한 후의 결과는 굳이 Struts 2와 같이 다른 Framework를 혼합해서 사용할 필요가 있을까라는 의문이 들기 시작했습니다. 실제로 해외 오픈 소스 커뮤니티, 국내외 개발 관련 커뮤니티를 상주해 본 결과 Spring을 사용하면서 웹 애플리케이션의 MVC 구조를 Struts 2로 구현하는 경우는 레거시 시스템의 유지보수를 제외하고는 거의 없었습니다. 대부분의 프로젝트는 Spring Framework기반의 Maven 프로젝트가 대부분이였습니다.
+지금까지 Spring MVC를 통해 직접 구현하고 테스트한 후의 결과는 굳이 복수의 프레임워크를 혼합해서 사용할 필요가 있을까라는 의문이 들기 시작했습니다. 실제로 해외 오픈 소스 커뮤니티, 국내외 개발 관련 커뮤니티를 상주해 본 결과 Spring을 사용하면서 웹 애플리케이션의 MVC 구조를 Struts 2로 구현하는 경우는 레거시 시스템의 유지보수를 제외하고는 거의 없었습니다. 대부분의 프로젝트는 Spring Framework기반의 Maven 프로젝트가 대부분이였습니다.
 
 > Maven이라..공부 할 것이 더욱 늘어나네요.. Maven이라는 도구는 어떠한 계기로 탄생이 되었고, 왜 현재 많이 사용되고 있는지 궁금하네요!?
 
-
-Google Trends 에서도 아래와 같이 Struts 2에 대한 관심은 점점 줄어드는 추세입니다.
+#### Google Trends 에서도 아래와 같이 Struts 2에 대한 관심은 점점 줄어드는 추세입니다.
 
 <img src='https://lh4.googleusercontent.com/aevOwAQR2iWFGvFUCTiiWDy5nD8SxaP46NyuzeNa8zfSYrnFjGmmOiJAFd8Kz-EnY-riWjg1fH5IW0NOW-zqk1bV-dy7yGwB2Oj0I1a3SvMT-7eqYlTsi61I' />
 
-
-## SPRING MVC 구현하기
+## Spring MVC 구현하기
 
 아래의 내용은 제가 실제로 Spring MVC를 통해 간단한 Controller를 구현해 본 결과입니다.
 
@@ -77,7 +80,7 @@ Spring MVC는 HTTP Request, Response와 같은 서버-클라이언트간의 상�
 
 Spring MVC는 Struts 2 그리고 템플릿 엔진인 Freemarker와 관련된 설정 없이 DispatcherServlet만 등록하면 MVC 구현이 바로 가능합니다.
 
-> spring-servlet.xml은 애플리케이션에 필요한 스프링 환경 설정이 포함됩니다.
+> spring-servlet.xml은 애플리케이션에 필요한 스프링 환경 설정을 포함됩니다.
 - 애플리케이션의 Model 식별을 위한 component scan package를 지정
 - JSP나 Freemarker로 View를 표현하기 위해 viewResolver 등록
 - AOP에 대하 설정
@@ -87,7 +90,7 @@ Spring MVC는 Struts 2 그리고 템플릿 엔진인 Freemarker와 관련된 설
 
 #### ViewResolver 지정
 
-HTTP 요청에 대한 Contoller의 처리 결과를 생성할 view를 지정합니다. view단의 template로 freemarker를 사용하기 위해서 viewResolver를 등록합니다.
+HTTP 요청에 대한 Controller의 처리 결과를 생성할 view를 지정합니다. view단의 template로 Freemarker를 사용하기 위해서 viewResolver를 등록합니다.
 
 ```xml
 <context:component-scan base-package="com.jce.api" />
@@ -105,7 +108,7 @@ HTTP 요청에 대한 Contoller의 처리 결과를 생성할 view를 지정합�
 
 ```
 
-### Controller 클래스 생성
+### Controller 클래스 구현
 
 
 ```java
@@ -123,7 +126,8 @@ public class MemberController {
 }
 ```
 
-> @requestMapping
+#### @requestMapping 어노테이션
+
 HTTP 요청에 대한 URL Mapping 을 위한 Java 어노테이션(annotation), 클래스에 지정하면 해당 클래스 메소드에 모두 적용
 
 - value : HTTP 요청 URL                               
