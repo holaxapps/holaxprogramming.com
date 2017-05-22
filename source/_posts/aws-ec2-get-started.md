@@ -2,16 +2,20 @@
 title: AWS EC2 시작하기
 date: 2016-10-21 22:37:31
 desc: Amazon Web Service의 기초가 되는 EC2
-image: http://www.ybrikman.com/assets/img/blog/github-pages/github-pages.png
+image: https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/083/22c/30f249d.jpg
 categories: devops
 ---
 
 EC2는 Amazon 데이터 센터의 가상 Computing 서버를 유연하게 사용할 수 있게 만들어주는 서비스입니다. 서버 애플리케이션을 EC2에 배포하여 서비스하거나 애플리케이션의 빌드 용도로 사용할 수도 있습니다.
 
+<!--more-->
+
 > AWS EC2 Documentation
 https://aws.amazon.com/documentation/ec2/
 
 ## AWS EC2 Instance 생성
+
+<img src='https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/083/22c/30f249d.jpg' />
 
 먼저 AWS Services에서 EC2를 사용하기 위해서는 Create Instance를 통해 아래의 화면에 진입해야 합니다. 이 문서에는 Amazon Linux AMI를 선택하여 가상서버를 생성하고 접속하는 방법을 설명하고자 합니다.
 
