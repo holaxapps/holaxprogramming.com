@@ -2,6 +2,7 @@
 title: DB Connection Pool에 대한 이야기
 date: 2013-01-10 10:31:26
 desc: DB Connection Pool은 왜 필요할까?
+image: https://docs.oracle.com/cd/B12037_01/appdev.101/b10779/lnoci043.gif
 categories: devops
 ---
 
