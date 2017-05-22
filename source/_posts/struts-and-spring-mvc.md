@@ -1,5 +1,5 @@
 ---
-title: Struts와 Spring MVC의 Controller 클래스의 차이는?
+title: Struts 2와 Spring MVC의 Controller 클래스의 차이는?
 date: 2012-01-12 15:14:40
 desc: Struts에서 Spring MVC로 이동하기
 categories: spring-framework
