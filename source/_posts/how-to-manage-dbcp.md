@@ -42,7 +42,7 @@ try {
 4. executeQuery를 수행하여 그 결과로 ResultSet 객체를 받아서 데이터를 처리한다.
 5. 처리가 완료되면 처리에 사용된 리소스들을 close하여 반환한다.
 
-위의 예제를 통래서 쿼리에 대한 처리 시간이 0.1초가 소요된다면, 어느 부분에서 가장 느릴까? 가장 느린 부분은 웹 서버에서 물리적으로 연결을 해야하는 DB 서버에 최초로 Connection을 맺는 부분이다.
+위의 예제를 통해서 Database에서 원하는 데이터를 얻어 오기 까지의 과정에서 처리 시간이 0.1초가 소요된다면 어느 과장에서 비용이 가장 많이 발생할까? 가장 느린 부분은 웹 서버에서 물리적으로 DB서버에 최초로 연결되어 Connection 객체를 생성하는 부분이다.
 
 <img src='https://image.toast.com/aaaaahq/was-and-db.png' />
 
@@ -82,6 +82,8 @@ initialSize | 최초로 getConnection() Method를 통해 커넥션 풀에 채워
 
 #### maxActive >= initialSize
 
+최대 커넥션 개수는 초기에 생성할 커넥션 개수와 같거나 크게 설정해야 한다.
+
 #### maxActive = maxIdle
 
 maxActive 값과 maxIdle 값은 같은 것이 바람직하다. 만약 둘의 값이 아래와 같다고 가정해보자.
@@ -91,7 +93,7 @@ maxActive = 10
 maxIdle = 5
 ```
 
-항상 커넥션을 동시에 5개는 사용하고 있는 상황에서 1개의 커넥션이 추가로 요청된다면 maxActive = 10이므로 1개의 추가 커넥션을 데이터베이스에 연결한 후 Pool은 비즈니스 로직으로 커넥션을 전달한다. 이후 비즈니스 로직이 커넥션을 사용 후 풀에 반납할 경우, maxIdle=5에 영향을 받아 커넥션을 실제로 닫아버리므로, 일부 커넥션을 매번 생성했다 닫는 비용이 발생할 수 있다.
+항상 커넥션을 동시에 5개는 사용하고 있는 상황에서 1개의 커넥션이 추가로 요청된다면 `maxActive = 10`이므로 1개의 추가 커넥션을 데이터베이스에 연결한 후 Pool은 비즈니스 로직으로 커넥션을 전달한다. 이후 비즈니스 로직이 커넥션을 사용 후 풀에 반납할 경우, `maxIdle = 5`에 영향을 받아 커넥션을 실제로 닫아버리므로, 일부 커넥션을 매번 생성했다 닫는 비용이 발생할 수 있다.
 
 #### initialSize와 maxActive, maxIdle, minIdle 항목을 동일한 값으로 통일해도 무방하다.
 
@@ -113,7 +115,9 @@ WAS에서 설정해야 하는 값이 굉장히 많지만, 그 중 가장 성능�
 
 > 실제 운영중인 서비스에서 DBCP 값이 200에 가까운 수치가 설정되어 있어, 문제가 발생된 경우를 보았다. 무엇보다, WAS Thread 수는 DB Connection Pool의 갯수보다 더 적게 설정 되어 있었는데, 이러한 점을 효율적이지 못하다.
 
-그렇다면, WAS의 Thread의 개수가 DB의 Connection Pool의 갯수 보다 많아야 하는 이유는 무엇일까? 그 이유는 모든 어플리케이션이 DB에 접근하는것이 아니기 때문에 WAS의 Thread는 Connection Pool의 갯수보다 여유있게 설정해두는 것이 좋다.
+그렇다면, WAS의 Thread의 개수가 DB의 Connection Pool의 갯수 보다 많아야 하는 이유는 무엇일까? 그 이유는 애플리케이션에 대한 모든 요청이 DB에 접근하는 것은 아니기 때문이다.
+
+> WAS의 Thread는 Connection Pool의 갯수보다 여유있게 설정하는 것이 좋다.
 
 Connection Pool은 시스템의 환경에 따라 다르지만 보통 40~50개로 지정하면 Thread는 이보다 10개 정도 더 지정하는 것이 바람직하다. 하지만 최적의 성능의 위해서는 실제 요청이 얼마나 들어오는지 파악하는게 중요하며 가장 좋은 방법은 앞서 말한것 처럼 성능 테스트를 통해 최적화된 값을 구하는 것이다.
 
@@ -121,3 +125,4 @@ Connection Pool은 시스템의 환경에 따라 다르지만 보통 40~50개로
 
 - https://commons.apache.org/proper/commons-dbcp/
 - [자바 성능을 결정 짓는 코딩 습관과 튜닝 이야기](http://www.hanbit.co.kr/store/books/look.php?p_code=B6098766835)
+- http://d2.naver.com/helloworld/5102792
