@@ -2,10 +2,13 @@
 title: 빌드 도구를 모르면 생기는 재앙들
 date: 2011-12-24 15:14:40
 desc: Spring과 Maven 프로젝트 시작하기
+image: https://maven.apache.org/images/maven-logo-black-on-white.png
 categories: devops
 ---
 
 본격적으로 Spring Framework를 공부하기 위해 http://springsource.org 에서 제공되고 있는 오픈소스 프로젝트를 살펴보기 시작했다. Spring Source에서 제공하는 샘플 프로젝트를 가져와서 실제로 동작시켜 보고 싶었고 프로젝트를 살펴 보던 중 사내에서 운영하는 Spring 프로젝트의 구조와는 차이가 있다는 것을 발견하였다.
+
+<!--more-->
 
 ## 에잇 일단 실행부터!
 
