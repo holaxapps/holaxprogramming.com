@@ -18,9 +18,9 @@ categories: 기초강의
 
  우리는 왜 프로그래밍을 해야 하는지 그리고 프로그래밍 언어는 무엇인지에 대해서 살펴보고 Python을 통해서 프로그래밍 실습을 하기 위한 준비 단계를 가져봤어요.
 
-- [프로그래밍 언어에 대해 소개합니다](https://www.holaxprogramming.com/2017/03/04/hola-programming-chapter-01/
-- [안녕 Python!](https://www.holaxprogramming.com/2017/03/05/hola-programming-chapter-02/
-- [운영체제와 Python 설치하기](https://www.holaxprogramming.com/2017/03/06/hola-programming-chapter-03/
+- [프로그래밍 언어에 대해 소개합니다](https://www.holaxprogramming.com/2017/03/04/hola-programming-chapter-01/)
+- [안녕 Python!](https://www.holaxprogramming.com/2017/03/05/hola-programming-chapter-02/)
+- [운영체제와 Python 설치하기](https://www.holaxprogramming.com/2017/03/06/hola-programming-chapter-03/)
 
 ## 앞으로 할 것들
 
