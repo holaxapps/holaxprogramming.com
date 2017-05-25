@@ -25,7 +25,7 @@ categories: 기초강의
 - [프로그래밍 언어에 대해 소개합니다](http://www.holaxprogramming.com/2017/03/04/hola-programming-chapter-01/)
 - [안녕 Python!](http://www.holaxprogramming.com/2017/03/05/hola-programming-chapter-02/)
 - [운영체제와 Python 설치하기](http://www.holaxprogramming.com/2017/03/06/hola-programming-chapter-03/)
-- [Python으로 표현하기](http://www.holaxprogramming.com/2017/03/07/hola-programming-python-chapter-04/)
+- [Python으로 표현하기](https://www.holaxprogramming.com/2017/03/07/hola-programming-chapter-04/)
 - Python으로 요리하기 - 기본 재료들
 - Python으로 요리하기 - 재료를 담는 그릇
 - Python으로 요리하기 - 재료의 상태에 따라 요리의 흐름을 담는 레시피
@@ -34,7 +34,6 @@ categories: 기초강의
 - Python Module을 활용한 한 <> 영 번역 프로그램
 - 페이스북 메신저와 Ping-pong Chatbot 만들기
 - 한 <> 영 번역 Chatbot 탄생시키기
-- 우리는 왜 프로그래밍을 쉽게 포기하게 될까요?
 
 ## 안녕 프로그래밍의 목적은 단순해요
 
