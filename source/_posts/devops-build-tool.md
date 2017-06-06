@@ -46,7 +46,7 @@ Spring + Maven 프로젝트를 효율적으로 관리하기 위해서 기존의 
 
 STS를 통해 새로운 Maven Project를 생성하게 되면 아래와 같은 프로젝트 구조를 가진다.
 
-| Directory | Desc |
+Directory | Desc
 --|--
 /src/main/java | 자바 클래스 파일
 /src/main/resource | 스프링 환경 설정에 필요한 리소스 파일들
