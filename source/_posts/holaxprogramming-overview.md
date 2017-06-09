@@ -1,7 +1,7 @@
 ---
-title: 스몰스텝, 프로그래밍을 시작하는 작은 습관
+title: 안녕 프로그래밍 소개
 date: 2017-03-03 18:04:11
-desc: 안녕 프로그래밍 기초 강의 소개
+desc: 프로그래밍을 시작하는 작은 습관 상상하기
 image: http://images.mapsofworld.com/around-the-world/hello-around-the-world.jpg
 categories: 기초강의
 ---
@@ -19,20 +19,6 @@ categories: 기초강의
 > 하지만 결론은 프로그래밍은 누구나 배울 수 있습니다.
 
 이 글을 시작으로 프로그래밍에 관심이 있지만 어떻게 시작해야 될지 모르는 분들을 위해 천천히 따라해 볼 수 있는 프로그래밍 기초 강의를 연재해 볼까 합니다. 안녕 프로그래밍으로 이름을 지은 이 기초 강의를 통해 프로그래밍과 처음 인사하듯 가벼운 마음으로 시작해 보시길 바랍니다.
-
-## 강의 목차
-
-- 프로그래밍 언어에 대해 소개합니다
-- 안녕 Python!
-- 운영체제와 Python 설치하기
-- Python으로 표현하기
-- Python으로 요리하기 시리즈
-- 작은 프로젝트 시작하기
-- Python Module을 활용한 한 <> 영 번역 프로그램
-- 페이스북 메신저와 Ping-pong Chatbot 만들기
-- 한 <> 영 번역 Chatbot 탄생시키기
-
-> 기초강의 메뉴를 통해 보실 수 있습니다
 
 ## 안녕 프로그래밍의 목적은 단순해요
 
@@ -105,13 +91,3 @@ categories: 기초강의
 
 > 안녕 프로그래밍 페이스북 그룹
 https://www.facebook.com/groups/holaxprogramming/
-
-<br>
-
-**[글/그림 정민혁]**
-Joycity, NHN Entertainment에서 모바일게임 및 결제 관련 플랫폼을 개발해 왔습니다. 현재는 퇴사 후 1년간의 세계일주 후에 태국의 치앙마이에서 원하는 방식으로 살아보려고 아둥 바둥 발버둥 중입니다.
-
-지금 보시는 안녕 프로그래밍의 강의들은 브런치, 생활코딩, Youtube에도 함께 업데이트 되고 있습니다
-> 브런치 매거진 - https://brunch.co.kr/magazine/holaprogramming
-생활코딩 - https://opentutorials.org/course/2700
-Youtube - https://www.youtube.com/channel/UCdeU7rAkbmqjn_kZUn7fStQ
