@@ -20,5 +20,8 @@
     "hexo-renderer-pug": "^0.0.5",
     "hexo-server": "^0.2.0",
     "hexo-tag-video": "^0.0.2"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1"
   }
 }

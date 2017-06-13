@@ -8,6 +8,8 @@ categories: Fundamentals
 
 암호화는 과거부터 현재까지 소중한 정보를 지키는데 중요한 수단으로 활용되어 왔다. 세계 2차 대전에서 독일군의 최초의 자동화된 암호화 기계인 `에그니마`를 해독해 연합군을 승리로 이끈 튜링의 일화는 그 예를 가장 잘 보여주고 있다.
 
+<!-- more -->
+
 그뿐만 아니라 튜링은 암호학뿐만 아니라 인류에게 또 다른 선물을 안긴 천재 수학자이기도 하다. 튜링은 현대 컴퓨터의 이론적 모델인 `튜링머신`을 고안했다.
 
 <img src='http://www.stutteringhelp.org/sites/default/files/pictures/alan-turing.jpg' width='500' />
