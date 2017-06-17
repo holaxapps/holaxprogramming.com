@@ -2,12 +2,11 @@
 title: 파이썬 시작하기 TDD부터 PyPI에 배포까지 (2)
 date: 2017-06-17 15:24:49
 desc: unittest와 함께하는 파이썬 테스트
+image: http://www.agilenutshell.com/assets/test-driven-development/tdd-circle-of-life.png
 categories: python
 ---
 
 [지난 글](https://www.holaxprogramming.com/2017/06/15/python-get-started/)에서는 TDD와 함께 파이썬의 개발 환경을 준비하고 첫 테스트 케이스를 작성하였다. 테스트 코드를 먼저 작성함으로써 다양한 문제에 자연스럽게 노출될 수 있었는데 여전히 테스트를 실행하기 위한 의문을 남겨놓은 상태이다. 의문을 풀기 위해 테스트를 위한 표준 라이브러리인 `unittest`에 대해 자세히 살펴볼 필요가 있다. Google의 검색창에서 아래의 키워드를 통해 검색해본다.
-
-<!-- more -->
 
 ```
 python unittest
@@ -162,7 +161,9 @@ Ran 2 tests in 0.001s
 OK
 ```
 
-행복한 일이 벌어졌으니 이 쯤에서 TestCase 클래스에서 제공하는 assert Functions를 살펴보는 것도 좋겠다.
+<br/>
+
+테스트가 성공한 행복한 일이 벌어졌으니 이 쯤에서 TestCase 클래스를 자세히 살펴봐도 좋아 보인다. 먼저 TestCase 클래스에서 제공하는 assert Functions의 리스트는 아래와 같다.
 
 Method	| Checks that |	New in
 --|--|--
@@ -179,7 +180,7 @@ assertNotIn(a, b) |	a not in b |	3.1
 assertIsInstance(a, b) |	isinstance(a, b) |	3.2
 assertNotIsInstance(a, b) |	not isinstance(a, b) |	3.2
 
-테스트 전과 후에 필요한 행동이 있다면 TestCase 클래스의 `setUp()` `tearDown()` Functions를 활용할 수도 있다.
+그리고 테스트 전과 후에 필요한 행동이 있다면 TestCase 클래스의 `setUp()` `tearDown()` Functions를 활용할 수도 있다.
 
 ```python
 class TestArray(unittest.TestCase):
@@ -206,9 +207,7 @@ class TestArray(unittest.TestCase):
         print('elements = {}'.format(self.array))
 ```
 
-```python
-class TestArray(unittest.TestCase):
-```
+<br/>
 
 `TestCase`는 `unittest.main()`이 동작하는 과정에서 자동으로 수집해 실행하지만 아래와 같이 사용자가 원하는 TestCase를 정의해 실행할 수도 있다.
 
@@ -219,6 +218,8 @@ def suite():
     suite.addTest(TestHttp())
     return suite
 ```
+
+<br/>
 
 마지막으로 우리가 지금까지 살펴 본 `unittest`를 통한 테스트의 전체적인 흐름을 표현하면 아래와 같다.
 
@@ -247,14 +248,13 @@ def test():
 print(test())                       
 ```
 
+<br/>
 
 지금까지 테스트 코드를 먼저 작성하는 것으로 파이썬에 적응해 나아가는 모습을 살펴보았다. 모든 내용을 정리하지는 못했지만 이 과정에서 파이썬의 Built-in Keyword 부터 Function, Classes, Variables를 표현하는 연습도 저절로 할 수 있었다.
 
 파이썬을 A부터 Z까지 학습한 뒤 프로젝트에 활용할 수도 있겠지만 TDD를 통해 다양한 문제에 노출되면서 주도적으로 학습에 필요한 내용을 찾아보았다. 예제는 단순했지만 앞으로 우리가 작성하는 코드는 점점 복잡해지며 나중에는 `레거시`라는 괴물로 변하기도 한다.
 
 TDD를 통해 지속적으로 변경이 용이한 코드를 작성하는 것을 기대하면서 이 글을 마무리한다. 다음 글에서는 파이썬 프로젝트의 구조와 파이썬의 실행 환경을 지탱하는 다양한 도구들을 살펴보도록 하겠다.
-
-<br/>
 
 #### References
 
