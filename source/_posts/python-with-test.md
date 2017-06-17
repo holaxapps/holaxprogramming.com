@@ -163,7 +163,7 @@ Ran 2 tests in 0.001s
 OK
 ```
 
-<br/>
+<img src='http://www.agilenutshell.com/assets/test-driven-development/tdd-circle-of-life.png' />
 
 테스트가 성공한 행복한 일이 벌어졌으니 이 쯤에서 TestCase 클래스를 자세히 살펴봐도 좋아 보인다. 먼저 TestCase 클래스에서 제공하는 assert Functions의 리스트는 아래와 같다.
 
