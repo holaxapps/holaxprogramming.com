@@ -8,6 +8,8 @@ categories: python
 
 [지난 글](https://www.holaxprogramming.com/2017/06/15/python-get-started/)에서는 TDD와 함께 파이썬의 개발 환경을 준비하고 첫 테스트 케이스를 작성하였다. 테스트 코드를 먼저 작성함으로써 다양한 문제에 자연스럽게 노출될 수 있었는데 여전히 테스트를 실행하기 위한 의문을 남겨놓은 상태이다. 의문을 풀기 위해 테스트를 위한 표준 라이브러리인 `unittest`에 대해 자세히 살펴볼 필요가 있다. Google의 검색창에서 아래의 키워드를 통해 검색해본다.
 
+<!-- more -->
+
 ```
 python unittest
 ```
