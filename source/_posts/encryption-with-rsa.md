@@ -3,7 +3,7 @@ title: RSA를 이용한 암호화와 서명
 date: 2017-06-12 11:54:07
 desc: Java 프로그래밍을 활용하는 서명과 암호화 기법
 image: https://www.amatisnetworks.com/wp-content/uploads/2016/06/Public-Key-Encryption-shutterstock_224144242.jpg
-categories: Fundamentals
+categories: fundamentals
 ---
 
 암호화는 과거부터 현재까지 소중한 정보를 지키는데 중요한 수단으로 활용되어 왔다. 세계 2차 대전에서 독일군의 최초의 자동화된 암호화 기계인 `에니그마`를 해독해 연합군을 승리로 이끈 튜링의 일화는 그 예를 가장 잘 보여주고 있다.
