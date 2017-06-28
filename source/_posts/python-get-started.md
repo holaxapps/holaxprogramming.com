@@ -1,15 +1,15 @@
 ---
-title: 파이썬 시작하기 TDD부터 PyPI에 배포까지 (1)
+title: TDD로 새로운 언어 접근하기
 date: 2017-06-15 00:24:49
-desc: TDD로 새로운 언어 접근하기
+desc: 파이썬 시작하기 TDD부터 PyPI에 배포까지 
 categories: python
 ---
 
-필자는 보통 새로운 언어를 학습하기 위해서 먼저 프로그래밍을 위한 개발 환경을 설치하고 그 이후에는 `TDD(Test Driven Development)`를 통해 다양한 문제에 노출되는 것으로 시작한다. TDD는 소프트웨어를 개발하는 방법론 중 하나이며, 우리가 작성하게 되는 모든 코드는 올바르게 작동하는지에 대한 검증이 필요한데 보통 이러한 과정을 `테스트`라고 불린다.
+필자는 보통 새로운 언어를 학습하기 위해서 먼저 프로그래밍을 위한 개발 환경을 설치하고 그 이후에는 `TDD(Test Driven Development)`를 통해 다양한 문제에 노출되는 것으로 시작한다. TDD는 소프트웨어를 개발하는 방법론 중 하나이며, 우리가 작성하게 되는 모든 코드는 올바르게 작동하는지에 대한 검증이 필요한데 보통 이러한 과정을 `테스트`라고 불린다. 
 
-<!-- more -->
+<!--more-->
 
-테스트는 직접 기능을 사용하면서 사용자 관점에서 테스트하기도 하며 개발자가 직접 테스트하거나 혹은 테스트를 위한 팀이 있을 수도 있다. 여기서 결론은 누군가는 당신이 작성한 코드를 테스트해야 한다는 것이다. TDD는 여기서 개발자가 자신의 코드를 직접 테스트하는 것을 말하며 문자 그대로 `테스트`를 위한 코드를 먼저 작성하는 것을 의미한다.
+테스트는 직접 기능을 사용하면서 사용자 관점에서 테스트하기도 하며 개발자가 직접 테스트하거나 혹은 테스트를 위한 팀이 있을 수도 있다. 여기서 결론은 누군가는 당신이 작성한 코드를 테스트해야 한다는 것이다. TDD는 여기서 개발자가 자신의 코드를 직접 테스트하는 것을 말하며 문자 그대로 `테스트`를 위한 코드를 먼저 작성하는 것을 의미한다. 
 
 개인적으로는 TDD를 테스트 코드를 먼저 작성하는 습관이라고 말하고 싶다. TDD를 통해 새로운 프로그래밍 언어를 학습하면 아래와 같은 장점이 있다.
 
@@ -33,7 +33,7 @@ https://www.amazon.com/Test-Driven-Development-Kent-Beck/dp/0321146530
 
 ```bash
 $ python
-Python 3.6.0 |Anaconda 4.3.1 (x86_64)| (default, Dec 23 2016, 13:19:00)
+Python 3.6.0 |Anaconda 4.3.1 (x86_64)| (default, Dec 23 2016, 13:19:00) 
 [GCC 4.2.1 Compatible Apple LLVM 6.0 (clang-600.0.57)] on darwin
 Type "help", "copyright", "credits" or "license" for more information.
 >>> _
@@ -142,7 +142,7 @@ class Array(object):
 
 ```
 import unittest
-from src import array
+from algorithms import array
 
 class TestArray(unittest.TestCase):
     def test_sum(self):
@@ -168,10 +168,9 @@ class TestArray(unittest.TestCase):
 
 `Walking Skeleton`이란 실제로 동작하는 프로젝트의 골격을 말하는데, 여기서 `동작하다`라는 추상적인 표현은 기능을 말하는 것이 아닌 프로젝트가 빌드되고 배포되기까지의 과정을 위한 기반을 말한다. 문자 그대로 아래와 같이 프로젝트를 지탱하는 `뼈대(Skeleton)`되시겠다.
 
-- 테스트
-- 프로젝트 실행 환경
+- 테스트 전략
+- 프로젝트를 지탱하는 파이썬 실행 환경
 - 빌드 또는 패키징
-- 정적 분석과 코드 커버리지
 - 배포
 
 다음 글에서는 `TDD`와 `Walking Skelton`를 이용해 점차 프로젝트를 구성해 나아가는 과정을 살펴보도록 하겠다.

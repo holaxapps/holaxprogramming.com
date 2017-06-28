@@ -1,14 +1,13 @@
 ---
-title: 파이썬 시작하기 TDD부터 PyPI에 배포까지 (2)
+title: unittest와 함께하는 파이썬 테스트
 date: 2017-06-17 15:24:49
-desc: unittest와 함께하는 파이썬 테스트
-image: http://www.agilenutshell.com/assets/test-driven-development/tdd-circle-of-life.png
+desc: 파이썬 시작하기 TDD부터 PyPI에 배포까지
 categories: python
 ---
 
-[지난 글](https://www.holaxprogramming.com/2017/06/15/python-get-started/)에서는 TDD와 함께 파이썬의 개발 환경을 준비하고 첫 테스트 케이스를 작성하였다. 테스트 코드를 먼저 작성함으로써 다양한 문제에 자연스럽게 노출될 수 있었는데 여전히 테스트를 실행하기 위한 의문을 남겨놓은 상태이다. 의문을 풀기 위해 테스트를 위한 표준 라이브러리인 `unittest`에 대해 자세히 살펴볼 필요가 있다. Google의 검색창에서 아래의 키워드를 통해 검색해본다.
+[지난 글](https://www.holaxprogramming.com/2017/06/15/python-get-started/)에서는 TDD와 함께 파이썬의 개발 환경을 준비하고 첫 테스트 케이스를 작성하였다. 테스트 코드를 먼저 작성함으로써 다양한 문제에 자연스럽게 노출될 수 있었는데 여전히 테스트를 실행하기 위한 의문을 남겨놓은 상태이다. 의문을 풀기 위해 테스트를 위한 표준 라이브러리인 `unittest`에 대해 자세히 살펴볼 필요가 있다. Google의 검색창에서 아래의 키워드를 통해 검색해본다. 
 
-<!-- more -->
+<!--more-->
 
 ```
 python unittest
@@ -19,7 +18,7 @@ python unittest
 `test_array.py`
 ```
 import unittest
-from src import array
+from algorithms import array
 
 class TestArray(unittest.TestCase):
     """
@@ -96,7 +95,7 @@ OK
 - [x] 두 번째 Argument로 전달된 숫자들의 합을 반환한다.
 - [ ] 첫 번째 Argument의 숫자와 두 번째 Argument의 숫자의 개수가 같은지 체크하고 틀리다면 예외를 발생시킨다.
 
-우리는 지금까지 많은 문제들을 해결하였지만 현재의 테스트 케이스로는 마지막 문제를 검증할 수 없는 상태이다.
+우리는 지금까지 많은 문제들을 해결하였지만 현재의 테스트 케이스로는 마지막 문제를 검증할 수 없는 상태이다. 
 
 ```
 첫 번째 Argument의 숫자와 두 번째 Argument의 숫자의 개수가 같은지 체크하고 틀리다면 예외를 발생시킨다.
@@ -155,7 +154,7 @@ class Array(object):
 위와 같이 예외를 발생시키기 위해 파이썬의 `raise` 키워드와 Built-in 클래스인 `Exception`을 통해서 `sum`의 첫 번째 인자의 값과 두 번째 인자의 문자열에 포함되는 숫자들의 개수가 다르면 예외를 발생시키는 모습이다. 다시 테스트해보자!
 
 ```
-$ python -m unittest
+$ python -m unittest 
 ..
 ----------------------------------------------------------------------
 Ran 2 tests in 0.001s
@@ -163,7 +162,7 @@ Ran 2 tests in 0.001s
 OK
 ```
 
-<img src='http://www.agilenutshell.com/assets/test-driven-development/tdd-circle-of-life.png' />
+<br/>
 
 테스트가 성공한 행복한 일이 벌어졌으니 이 쯤에서 TestCase 클래스를 자세히 살펴봐도 좋아 보인다. 먼저 TestCase 클래스에서 제공하는 assert Functions의 리스트는 아래와 같다.
 
