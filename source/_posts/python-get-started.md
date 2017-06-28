@@ -1,7 +1,7 @@
 ---
-title: TDD로 새로운 언어 접근하기
+title: 파이썬 시작하기 TDD부터 PyPI에 배포까지 
 date: 2017-06-15 00:24:49
-desc: 파이썬 시작하기 TDD부터 PyPI에 배포까지 
+desc: TDD를 통해 파이썬 시작하기
 categories: python
 ---
 
@@ -174,6 +174,7 @@ class TestArray(unittest.TestCase):
 - 배포
 
 다음 글에서는 `TDD`와 `Walking Skelton`를 이용해 점차 프로젝트를 구성해 나아가는 과정을 살펴보도록 하겠다.
+> https://www.holaxprogramming.com/2017/06/17/python-with-test/
 
 <br/>
 

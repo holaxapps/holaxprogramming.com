@@ -9,7 +9,7 @@ categories: python
 
 <!--more-->
 
-- [TDD와 함께 파이썬 시작하기](https://www.holaxprogramming.com/2017/06/15/python-get-started/)
+- [파이썬 시작하기 TDD부터 PyPI에 배포까지 ](https://www.holaxprogramming.com/2017/06/15/python-get-started/)
 - [unittest와 함께하는 파이썬 테스트](https://www.holaxprogramming.com/2017/06/17/python-with-test/)
 
 그리고 우리는 이 과정에서 `Walking Skeleton`을 통해 프로젝트를 지탱하는 구성 요소를 아래와 같이 정의하였다. 이번 글에서는 `unittest`와 함께 테스트 코드를 작성하는 과정에 이어 앞으로 발생되는 문제를 더욱 효율적으로 해결하기 위한 방법들을 살펴보도록 하자.
