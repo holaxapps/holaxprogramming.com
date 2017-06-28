@@ -2,6 +2,7 @@
 title: 파이썬 프로젝트의 구조
 date: 2017-06-28 15:24:49
 desc: 파이썬 시작하기 TDD부터 PyPI에 배포까지
+image: https://cdn.dribbble.com/users/708424/screenshots/3125631/python3_dribbble2.jpg
 categories: python
 ---
 
