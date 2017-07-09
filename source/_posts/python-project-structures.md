@@ -18,7 +18,7 @@ categories: python
 - ~~테스트 전략~~
 - 파이썬 프로젝트의 구조
 - 파이썬 프로젝트를 지탱하는 실행 환경
-- 빌드 또는 패키징, 배포 
+- 빌드 또는 패키징, 배포
 
 ## 모듈과 패키지
 
@@ -67,7 +67,7 @@ class TestArray(unittest.TestCase):
    	...
 ```
 
-요약하면 패키지로부터 모듈을 사용하기 위한 파이썬 키워드는 `from` 그리고 `import`이며 표현 방법은 아래와 같다. 
+요약하면 패키지로부터 모듈을 사용하기 위한 파이썬 키워드는 `from` 그리고 `import`이며 표현 방법은 아래와 같다.
 
 ```python
 from [package_name] import [module_name]
@@ -130,15 +130,15 @@ setup(name='algorithms',
 
 `setup()` Function의 Arguments는 프로젝트의 자세한 정보를 어떻게 정의할 것인지를 결정한다.
 
-Arguments | Description 
+Arguments | Description
 --|--|--
-name | 패키지의 이름 
-version | 패키지의 배포 버전 
+name | 패키지의 이름
+version | 패키지의 배포 버전
 description | 패키지에 대한 설명
 url | 패키지를 대표하는 웹페이지
 author | 패키지의 작성자
 license | 패키지의 라이센스
-packages | 프로젝트에 포함되는 패키지 리스트 
+packages | 프로젝트에 포함되는 패키지 리스트
 install_requires | 실행 환경에 필요한 최소한의 패키지 리스트
 python_requires | 실행 환경에 필요한 파이썬 버전
 
@@ -149,7 +149,7 @@ python_requires | 실행 환경에 필요한 파이썬 버전
 이렇게 setuptools 를 활용한 setup.py 는 파이썬에 의해 실행되는 CLI 프로그램의 역할을 하는데 기본적으로 제공되는 명령은 아래와 같다.
 
 ```bash
-$ python setup.py --help--commands
+$ python setup.py --help-commands
 Standard commands:
   build             build everything needed to install
   build_py          "build" pure Python modules (copy to build directory)
@@ -216,7 +216,7 @@ $ python -m pip install -U pip
 $ pip install requests
 ```
 
-패키지의 특정 버전을 지정하여 설치할 수 있다. 
+패키지의 특정 버전을 지정하여 설치할 수 있다.
 
 ```bash
 $ pip install requests==2.18.0

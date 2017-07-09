@@ -9,21 +9,21 @@ Gradle은 2017년 4월에 3.5 버전을 릴리즈하면서 `Build Cache`의 특�
 
 Gradle에서는 다음 버전에서 Build Cache를 정식으로 릴리즈하기 위해 아래와 같이 사용자들의 피드백을 요구했는데 내용은 아래와 같다.
 
-`1) 프로젝트에서 아래의 옵션을 통해 두 번째 빌드 타임 좀 확인해볼래?`
+#### 프로젝트에서 아래의 옵션을 통해 두 번째 빌드 타임 좀 확인해볼래?
 
 ```
 $ gradle --build-cache clean assemble
 $ gradle --build-cache clean assemble
 ```
 
-`2) Remote Cache도 함 사용해봐!`
+#### Remote Cache도 함 사용해봐!
 
 Remote로 캐시를 공유할려면 backend가 필요한데 [예제](https://github.com/gradle/task-output-cache-demos/tree/master/samples/03-use-http-backend)를 줄테니 참고하렴. 그런데 [Gradle Enterprise](https://gradle.com/enterprise)에서는 이미 제공하고 있음
- 
 
-`3) 피드백을 줘!`
 
-아무튼 직접 사용해보고 피드백을 주면 너의 프로젝트의 빌드 타임을 줄이는데 많은 도움이 될거임(..) 
+#### 피드백을 줘!
+
+아무튼 직접 사용해보고 피드백을 주면 너의 프로젝트의 빌드 타임을 줄이는데 많은 도움이 될거임(..)
 
 ## Gradle v4.0 Release
 
