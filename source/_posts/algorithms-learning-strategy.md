@@ -1,6 +1,6 @@
 ---
 title: 알고리즘 학습 전략
-date: 2017-06-30 11:54:07
+date: 2014-04-20 11:54:07
 categories: fundamentals
 ---
 
