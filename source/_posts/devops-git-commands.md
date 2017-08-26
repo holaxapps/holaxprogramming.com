@@ -206,16 +206,16 @@ git revert HEAD | HEAD에서 변경한 내역을 취소하는 새로운 commit �
 
 ## 자주 사용하는 Git 명령어들
 
-**Configurations**
+#### Configurations
 
 ```
 git config --global --list
-git config --global user.name {username} 
+git config --global user.name {username}
 git config --global user.email {email}
 git config --global color.ui “auto”
-``` 
+```
 
-**Basic**
+#### Basic
 
 ```
 git --version
@@ -228,15 +228,15 @@ git mv {filename} {new-filename}
 git checkout -- {filename}
 ```
 
-**Diff**
+#### Diff
 
 ```
-git diff 
-git diff --name-only 
+git diff
+git diff --name-only
 git diff {filename}
 ```
 
-**Remote**
+#### Remote
 
 ```
 git clone {address}
@@ -249,7 +249,7 @@ git remote show {name}
 git remote rm {name}
 ```
 
-**Branch & Tag**
+#### Branch
 
 ```
 git branch
@@ -260,7 +260,7 @@ git branch -d {branch}
 git branch -m {branch} {new-branch}
 ```
 
-**Reset**
+#### Reset
 
 ```
 $ git checkout -- {file_name}
