@@ -18,7 +18,7 @@ Java.lang.OutOfMemoryError: Permgen space
 
 Java 기반의 애플리케이션의 메모리는 운영체제의 JVM에서 관리하기 때문에 `Full GC`로 인해 애플리케이션이 멈추어버리는 Stop The World 현상에서 자유로울 수 없습니다.
 
-우리가 개발하고 운영하는 서비스에서도 하루에도 몇 번씩 GC가 발생하고 있고, 이런 상황에서 장애로 인한 Notification을 받지 않아도 우리의 생각과는 다르게 사용자에게 `503` 오류가 반환되고 있을지도 모르는 일입니다. 
+우리가 개발하고 운영하는 서비스에서도 하루에도 몇 번씩 GC가 발생하고 있고, 이런 상황에서 장애로 인한 Notification을 받지 않아도 우리의 생각과는 다르게 사용자에게 `503` 오류가 반환되고 있을지도 모르는 일입니다.
 
 이 글에서는 Java 기반의 시스템 운영 중에 문제가 발생할 때 기본적으로 알아두어야할 내용을 다룹니다.
 
@@ -97,14 +97,14 @@ HTTPS 암호화에 쓰이는 TLS는 크게 변한 것이 없는데 반해, 클�
 
 주로 읽기 전용인 환경에 있어서는 처리 능력 향상과 가용성의 증대라는 이점도 있다. 이는 하나의 서버가 장애를 일으켜도 다른 서버로 즉시 처리를 할 수 있는 로드 밸런싱을 의미한다.
 
-> 스케일 아웃은 개개의 처리는 비교적 단순하지만 다수의 처리를 동시 병행적으로 실시하지 않으면 안 되는 경우에 적합한데 갱신 데이터의 정합성 유지에 대한 요건이 별로 어렵지 않은 경우에 적절하다. 즉 높은 병렬성을 실현하기 쉬운 경우이다. 
+> 스케일 아웃은 개개의 처리는 비교적 단순하지만 다수의 처리를 동시 병행적으로 실시하지 않으면 안 되는 경우에 적합한데 갱신 데이터의 정합성 유지에 대한 요건이 별로 어렵지 않은 경우에 적절하다. 즉 높은 병렬성을 실현하기 쉬운 경우이다.
 
 #### Tomcat 인스턴스 설정하기
 
 `인스턴스별 배포경로 및 로그파일 저장경로`
 ```
-$ mkdir -p /home/irteam/deploy/application
-$ mkdir -p /home/irteam/logs/application
+$ mkdir -p /home/jungminhyuck/deploy/application
+$ mkdir -p /home/jungminhyuck/logs/application
 ```
 
 `/scripts/application-tomcat-configurations.xml`
@@ -122,7 +122,7 @@ $ mkdir -p /home/irteam/logs/application
 
     <Engine name="Catalina" defaultHost="localhost">
       <Host name="localhost"  appBase="webapps" unpackWARs="false" autoDeploy="false" xmlValidation="false" xmlNamespaceAware="false">
-            <Context docBase="/home1/irteam/deploy/application/" path="" reloadable="false" />
+            <Context docBase="/home1/jungminhyuck/deploy/application/" path="" reloadable="false" />
       </Host>
     </Engine>
   </Service>
@@ -133,17 +133,17 @@ $ mkdir -p /home/irteam/logs/application
 ```bash
 #!/usr/bin/env bash
 
-XML="/home1/irteam/scripts/application-tomcat-configurations.xml"
+XML="/home1/jungminhyuck/scripts/application-tomcat-configurations.xml"
 
 export LC_ALL="en_US.utf8"
 export LANG="en_US.utf8"
-export JAVA_HOME="/home1/irteam/apps/jdk"
-export CATALINA_HOME="/home1/irteam/apps/tomcat"
-export CATALINA_BASE="/home1/irteam/apps/tomcat"
-export CATALINA_TMPDIR="/home1/irteam/apps/tomcat/temp"
-export CLASSPATH="/home1/irteam/apps/tomcat/bin/bootstrap.jar"
-export CATALINA_LOG="/home1/irteam/logs/application/catalina.log"
-export CATALINA_OUT="/home1/irteam/logs/application/catalina.log"
+export JAVA_HOME="/home1/jungminhyuck/apps/jdk"
+export CATALINA_HOME="/home1/jungminhyuck/apps/tomcat"
+export CATALINA_BASE="/home1/jungminhyuck/apps/tomcat"
+export CATALINA_TMPDIR="/home1/jungminhyuck/apps/tomcat/temp"
+export CLASSPATH="/home1/jungminhyuck/apps/tomcat/bin/bootstrap.jar"
+export CATALINA_LOG="/home1/jungminhyuck/logs/application/catalina.log"
+export CATALINA_OUT="/home1/jungminhyuck/logs/application/catalina.log"
 
 ${CATALINA_BASE}/bin/startup.sh -config ${XML}
 ```
@@ -174,13 +174,13 @@ export CATALINA_OPTS="$CATALINA_OPTS -Dspring.profiles.active=dev"
 
 `maxThread`는 Tomcat이 요청을 처리하기 위해 만들어내는 최대 Thread 개수를 의미한다. Tomcat과 같은 WAS에서 설정해야 하는 값이 굉장히 많지만 그 중 가장 성능에 많은 영향을 주는 부분은 maxThread와 같이 Thread Pool에 직접적으로 연관된 설정일 것이다.
 
-Thread Pool에 대한 설정은 메모리를 얼마나 할당할 것인가와 관련이 있기 때문에 Thread를 수를 많이 사용할 수록 메모리를 많이 점유하게 된다. 그렇다고 반대로 메모리를 위해 적게 지정한다면, 서버에서는 많은 요청을 처리하지 못하고 대기하는 상황이 생길수 있다. 
+Thread Pool에 대한 설정은 메모리를 얼마나 할당할 것인가와 관련이 있기 때문에 Thread를 수를 많이 사용할 수록 메모리를 많이 점유하게 된다. 그렇다고 반대로 메모리를 위해 적게 지정한다면, 서버에서는 많은 요청을 처리하지 못하고 대기하는 상황이 생길수 있다.
 
 #### 쓰레드 풀 관리는 어떻게 하면 좋을까?
 
 Tomcat의 maxThread 개수를 위해 고려할 점은 웹 애플리케이션과 연관되는 시스템도 고려할 필요가 있다. 예를 들면 실제 운영중인 서비스에서 DB connection pool 값이 200에 가까운 수치가 설정되어 있어, 문제가 발생된 경우를 보았다. 무엇보다 WAS의 maxThread의 개수는 DB 커넥션 풀의 개수에 비해 적게 설정 되어 있었는데 이는 효율적이지 못하다.
 
-그 이유는 애플리케이션에 대한 모든 요청이 DB에 접근하는 것은 아니기 때문이다. WAS의 maxThread는 DB connection pool의 수보다 여유있게 설정하는 것이 좋다. DB connection pool은 서비스의 상황에 따라 다르지만 보통 50개로 지정하면 Thread는 이보다 10-20개 정도 더 지정하는 것이 바람직하다. 하지만 무엇보다 중요한 것은 성능 테스트로 다수의 서버에서 옵션을 달리해 결과를 비교하는 것이 가장 빠른 검토 결과를 얻을 수 있다는 것이다. 
+그 이유는 애플리케이션에 대한 모든 요청이 DB에 접근하는 것은 아니기 때문이다. WAS의 maxThread는 DB connection pool의 수보다 여유있게 설정하는 것이 좋다. DB connection pool은 서비스의 상황에 따라 다르지만 보통 50개로 지정하면 Thread는 이보다 10-20개 정도 더 지정하는 것이 바람직하다. 하지만 무엇보다 중요한 것은 성능 테스트로 다수의 서버에서 옵션을 달리해 결과를 비교하는 것이 가장 빠른 검토 결과를 얻을 수 있다는 것이다.
 
 ## 컴퓨터 자원과 운영체제에 따라 달라지는 GC 성능
 
@@ -199,7 +199,7 @@ Tomcat의 인스턴스 개수를 정하여 효율적으로 컴퓨터의 자원�
 
 64bit JVM은 32bit보다 30~40%의 Heap을 더 사용한다. 따라서 더 많은 메모리 할당이 필요하고, GC할 때 더 많은 시간이 걸린다. 하지만 32bit의 JVM은 아래와 같은 제약사항을 가진다.
 
-운영체제 | 제약사항 
+운영체제 | 제약사항
 --|--
 리눅스 | 최대 2GB Heap, hugemem 커널의 경우 3GB
 윈도우 | 최대 1.5GB Heap
@@ -219,13 +219,13 @@ Tomcat 인스턴스를 다수를 확보하는 요인중의 하나가 인스턴�
 
 `JVM의 Garbage Collector`
 
-JVM에서 어떤 GC를 사용할 것인지, 즉 GC 알고리즘에 따라 성능이 결정되기도 한다. 
+JVM에서 어떤 GC를 사용할 것인지, 즉 GC 알고리즘에 따라 성능이 결정되기도 한다.
 
 #### 정말로 한 BOX에서 다수의 Tomcat 인스턴스를 구성하는 것이 효율적일까?
 
 우리는 지금까지 다수의 Tomcat 인스턴스를 통해 `컴퓨터의 자원을 효율적`으로 사용하고 `가용성`의 측면에서 이득을 본다고 했는데 Tomcat 인스턴스를 한대만 운영하는 것이 좋은 경우도 있을까?
 
-다수의 장비를 운용할 수 있는 환경이 주어진다면 오히려 하나의 인스턴스를 운영하는 것이 대게 성능이 좋은 경우가 많은데 이는 운영체제에서 `CPU의 자원을 각 프로세스에 Scheduling 정책`에 따라서 할당하기 때문이다. 이는 JVM에서 어떤 GC를 사용할 것인지, 즉 `GC 알고리즘`에 따라 그대로 성능에 반영되게 된다. 
+다수의 장비를 운용할 수 있는 환경이 주어진다면 오히려 하나의 인스턴스를 운영하는 것이 대게 성능이 좋은 경우가 많은데 이는 운영체제에서 `CPU의 자원을 각 프로세스에 Scheduling 정책`에 따라서 할당하기 때문이다. 이는 JVM에서 어떤 GC를 사용할 것인지, 즉 `GC 알고리즘`에 따라 그대로 성능에 반영되게 된다.
 
 거기다 Tomcat의 인스턴스를 다수를 운영할 때에는 한 장비에서 수용할 수 있는 maxThread 설정을 분산해야하는 등 고려해야할 일이 많아지는 것도 단점이다.
 
@@ -273,7 +273,7 @@ Serial GC는 가장 단순한 GC이지만 사용하지 않는 것을 추천한�
 다음 Parallel GC은 JVM의 디폴트 Collector로 말 그대로 병렬로 GC한다. 메모리가 충분하고 CPU의 성능과 코어 개수가 많아 순간적으로 트래픽이 몰려도 일시 중단을 견딜 수 있고 GC에 의해 야기된 CPU 오버 헤드에 대해 최적화할 수 있는 애플리케이션에 가장 적합합니다.
 
 - `-XX:+UseParallelGC` 옵션을 사용하여 Minor GC 에서 활성화 할 수 있다.
-- `-XX:+UseParallelOldGC` 옵션을 사용하여 Major GC에서 활성화 할 수 있다. 
+- `-XX:+UseParallelOldGC` 옵션을 사용하여 Major GC에서 활성화 할 수 있다.
 
 #### The Concurrent Mark & Sweep GC
 
@@ -291,15 +291,15 @@ Serial GC는 가장 단순한 GC이지만 사용하지 않는 것을 추천한�
 
 만약 운영체제에서 JVM 인스턴스에 할당할 수 있는 메모리의 크기가 4GB보다 큰 경우에는 G1 GC 알고리즘을 사용할 수 있다. CMS는 애플리케이션의 Thread 정지 시간을 최소화 하여 응답시간 지연을 줄이고자 하는 웹 애플리케이션에 적당하다.
 
-- Major GC 실행시 Application Thread와 GC Thread가 동시에 수행된다. 
-- `-XX:+UseConcMarkSweepGC` 옵션을 사용하여 활성화 할 수 있다. 
+- Major GC 실행시 Application Thread와 GC Thread가 동시에 수행된다.
+- `-XX:+UseConcMarkSweepGC` 옵션을 사용하여 활성화 할 수 있다.
 - Minor GC에서 Parallel Collector를 활성화하기 위해서는 `-XX:+UseParNewGC` 옵션을 사용해야 하며 `-XX:+UseParallelGC`와 같이 사용해서는 안된다!
 
 #### The G1(Garbage First) GC
 
 G1 GC는 Java 1.7 부터 도입되었으며 4GB보다 더욱 큰 자원을 제공하도록 설계되었다. G1 GC를 이해하려면 지금까지의 Young 영역과 Old 영역에 대해서는 잊는 것이 좋다.
 
-GC GC는 Generational 한 알고리즘과는 다르게 백그라운드의 멀티 쓰레드를 활용해 1MB에서 32MB까지의 수 많은 리젼으로 Heap을 분할한다. 
+GC GC는 Generational 한 알고리즘과는 다르게 백그라운드의 멀티 쓰레드를 활용해 1MB에서 32MB까지의 수 많은 리젼으로 Heap을 분할한다.
 
 <img src='http://d2.naver.com/content/images/2015/06/helloworld-1329-6.png' width='400' />
 
@@ -309,7 +309,7 @@ G1 GC는 위와 같이 바둑판의 각 영역에 객체를 할당하고 GC를 �
 
 G1 GC의 가장 큰 장점은 성능이다. 지금까지 설명한 어떤 GC 방식보다도 빠르다.
 
-하지만 이와 같이 4GB 이상의 큰 Heap을 가지는 것은 요즘과 같이 마이크로 서비스 아키텍쳐에서는 논쟁 거리가 될만하다. 지난 몇 년동안 많은 개발자들이 거대한 시스템을 작은 마이크로 단위로 옮기는 노력을 해왔기 때문이다. 
+하지만 이와 같이 4GB 이상의 큰 Heap을 가지는 것은 요즘과 같이 마이크로 서비스 아키텍쳐에서는 논쟁 거리가 될만하다. 지난 몇 년동안 많은 개발자들이 거대한 시스템을 작은 마이크로 단위로 옮기는 노력을 해왔기 때문이다.
 
 이는 다양한 애플리케이션을 서로 격리하고 효율적인 배포 프로세스를 통해 거대한 애플리케이션 클래스를 메모리에 로드하는데 소요되는 비용을 절감하는 등 많은 요인을 포함하고 있다. 이는 애플리케이션을 동일한 물리적 머신에 배포할 수 있도록 하는 Docker와 같은 컨테이너 기술에 의해 가속화 되어 왔다.
 
@@ -328,7 +328,7 @@ JDK 8에서는 Perm 영역이 아니라 Metaspace에 클래스 정보가 올라�
 `JVM Options 예시`
 
 ```
--Djava.awt.headless=true -Dfile.encoding=UTF-8 -server -Xms2048m -Xmx2048m -XX:MaxMetaspaceSize=512m -XX:+UseG1GC -XX:+DisableExplicitGC -XX:+UseStringDeduplication 
+-Djava.awt.headless=true -Dfile.encoding=UTF-8 -server -Xms2048m -Xmx2048m -XX:MaxMetaspaceSize=512m -XX:+UseG1GC -XX:+DisableExplicitGC -XX:+UseStringDeduplication
 ```
 
 ## Java 9의 Garbage Collector
@@ -351,7 +351,7 @@ JDK 8에서는 Perm 영역이 아니라 Metaspace에 클래스 정보가 올라�
 
 ## JVM 튜닝 꼭 해야할까?
 
-JVM 튜닝은 가장 마지막에 고려하는 것이 좋다. 애플리케이션을 구동하는 운영체제에 메모리가 해제되지 않는 등의 이상 징후가 생긴다면 먼저 애플리케이션에서 과도하게 많은 메모리를 차지하는 객체를 추적할 필요가 있다. 특히 웹 애플리케이션과 같은 멀티 쓰레드 환경에서는 한 자원에 여러 쓰레드가 동시에 접근하면서 메모리 참조에 이상이 생기는 경우가 있다. 
+JVM 튜닝은 가장 마지막에 고려하는 것이 좋다. 애플리케이션을 구동하는 운영체제에 메모리가 해제되지 않는 등의 이상 징후가 생긴다면 먼저 애플리케이션에서 과도하게 많은 메모리를 차지하는 객체를 추적할 필요가 있다. 특히 웹 애플리케이션과 같은 멀티 쓰레드 환경에서는 한 자원에 여러 쓰레드가 동시에 접근하면서 메모리 참조에 이상이 생기는 경우가 있다.
 
 메모리 참조에 이상이 생기면 해제해야 하는 Garbage 객체가 누수되어 시스템에 큰 영향을 미치게 된다. 가장 많이 하는 실수는 메모리를 이용하는 LruCache과 같은 클래스를 구현하면서 `HashMap`를 잘못 사용하는 경우이다. `HashMap`의 put(), get()를 사용할때에는 동기화를 통해 Thread Safe하게 코드를 작성하거나 ConcurrentHashMap를 사용해야 한다.
 
