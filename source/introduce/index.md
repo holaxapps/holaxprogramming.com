@@ -96,7 +96,7 @@ image: http://images.mapsofworld.com/around-the-world/hello-around-the-world.jpg
 
 #### 텍스트 강의
 
-`알고리즘 기초`, `Java`, `Javascript`, `Python`, `웹 개발`, `DevOps`등 프로그래밍 전반의 내용을 텍스트로 전달합니다.
+`알고리즘 기초`, `Java`, `Javascript`, `Python`, `웹 개발`, `DevOps`등 프로그래밍 전반의 내용을 블로그에서 텍스트로 전달합니다.
 
 - https://www.holaxprogramming.com/
 
