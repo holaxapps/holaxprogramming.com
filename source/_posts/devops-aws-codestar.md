@@ -1,6 +1,6 @@
 ---
 title: AWS CodeStar로 1인 DevOps 코스프레하기
-date: 2017-09-01 11:49:55
+date: 2017-10-16 11:49:55
 categories: devops
 ---
 
@@ -117,21 +117,35 @@ CodeBuild는 소스 코드를 컴파일하는 단계부터 테스트 실행 후 
 
 ## 배포
 
+코드 변경이 있을 때마다 사용자가 정의한 릴리스 프로세스 모델에 따라 코드를 빌드, 테스트 및 배포하는 서비스인 AWS CodePipeline을 사용합니다.
+
 #### CodePipeline
 
 Source 저장소에 변경내역을 감지하는 것을 시작으로 배포하기 까지의 일련의 흐름을 CodePipeline을 통해 관리합니다.
 
-CodePipeline은 빠르고 안정적인 애플리케이션 및 인프라 업데이트를 위한 지속적 통합 및 지속적 전달 서비스입니다. CodePipeline은 사용자가 정의하는 출시 프로세스 모델에 따라 코드 변경이 있을 때마다 코드를 구축, 테스트 및 배포합니다. 따라서 기능과 업데이트를 신속하고 안정적으로 제공할 수 있습니다.
+CodePipeline은 애플리케이션를 짧은 주기로 지속적으로 통합하고 전달할 수 있도록 도와줍니다. CodePipeline은 사용자가 정의하는 출시 프로세스 모델에 따라 코드 변경이 있을 때마다 코드를 구축, 테스트 및 배포합니다. 따라서 기능과 업데이트를 신속하고 안정적으로 제공할 수 있습니다.
 
 <img src='https://s3.amazonaws.com/apnblog/2016+Blog+Images/Stelligent+Guest+Post/Updates/figure_1' />
+
+#### 지속적 전달(Continuous Delivery)
+
+<img src='https://d0.awsstatic.com/Projects/CICD%20Pipeline/setup-cicd-pipeline2.png' />
+
+`지속적 전달`은 프로덕션에 릴리스할 수 있도록 코드 변경이 자동으로 빌드, 테스트 및 준비되는 데브옵스 소프트웨어 개발 방식입니다. 빌드 단계 이후의 모든 코드 변경을 테스트 환경 및/또는 프로덕션 환경에 배포함으로써 지속적 통합을 확장합니다. 지속적 전달이 적절하게 구현되면, 개발자는 언제나 즉시 배포할 수 있고 표준화된 테스트 프로세스를 통과한 빌드 아티팩트를 보유하게 됩니다. 
+
+지속적 전달에서는 모든 코드 변경이 빌드 및 테스트된 후, 비프로덕션 테스트 또는 스테이징 환경으로 푸시됩니다. 프로덕션 배포 전에 여러 개의 병렬 테스트 단계가 있을 수 있습니다. 마지막 단계에서 준비가 완료되면 개발자가 프로덕션으로의 업데이트를 승인합니다. 이 부분이 프로덕션으로의 푸시가 명시적인 승인 없이 자동으로 수행되는 지속적 배포와 다른 점입니다.
+
+지속적 전달에서는 개발자가 단순한 유닛 테스트 외에도 다양한 테스트를 자동화할 수 있으므로, 고객에게 배포하기 전에 여러 차원에서 애플리케이션 업데이트를 확인할 수 있습니다. 이러한 테스트에는 UI 테스트, 로드 테스트, 통합 테스트, API 안정성 테스트 등이 포함될 수 있습니다. 이를 통해 개발자는 업데이트를 좀 더 철저히 검증하고 문제를 사전에 발견할 수 있습니다. 온프레미스에서는 힘들었지만, 클라우드에서는 테스트용으로 여러 개의 환경을 생성하고 복제하는 작업을 비용 효율적으로 손쉽게 자동화할 수 있습니다.
 
 ## 모니터링
 
 CodeStar의 콘솔에서는 모니터링을 위한 UI를 제공합니다. 
 
+<img src='https://d0.awsstatic.com/Projects/V445874/arch-diagram_nodejs-app.png' />
+
 #### CloudWatch
 
-CloudWatch를 사용하여 지표를 수집 및 추적하고, 로그 파일을 수집 및 모니터링하며, 경보를 설정하고, AWS 리소스 변경에 자동으로 대응할 수 있습니다. Amazon EC2 인스턴스, Amazon DynamoDB 테이블, Amazon RDS DB 인스턴스 같은 AWS 리소스뿐만 아니라 애플리케이션과 서비스에서 생성된 사용자 정의 지표 및 애플리케이션에서 생성된 모든 로그 파일을 모니터링할 수 있습니다. Amazon CloudWatch를 사용하여 시스템 전반의 리소스 사용률, 애플리케이션 성능, 운영 상태를 파악할 수 있습니다. 이러한 통찰력을 사용하여 문제에 적절히 대응하고 애플리케이션 실행을 원활하게 유지할 수 있습니다.
+CloudWatch를 사용하여 지표를 수집 및 추적하고, 로그 파일을 수집 및 모니터링하며, 경보를 설정하고, AWS 리소스 변경에 자동으로 대응할 수 있습니다. Amazon `EC2 Instance`, `Amazon DynamoDB` 테이블, Amazon RDS DB 인스턴스 같은 AWS 리소스뿐만 아니라 애플리케이션과 서비스에서 생성된 사용자 정의 지표 및 애플리케이션에서 생성된 모든 로그 파일을 모니터링할 수 있습니다. Amazon CloudWatch를 사용하여 시스템 전반의 리소스 사용률, 애플리케이션 성능, 운영 상태를 파악할 수 있습니다. 이러한 통찰력을 사용하여 문제에 적절히 대응하고 애플리케이션 실행을 원활하게 유지할 수 있습니다.
 
 ## 마치며
 
@@ -143,6 +157,7 @@ AWS의 CodeStar는 기존의 효율적인 시스템을 묶어 소스코드 관�
 
 - https://aws.amazon.com/ko/blogs/apn/an-introduction-to-aws-codebuild/
 - https://aws.amazon.com/ko/codestar/
+- https://aws.amazon.com/ko/devops/continuous-delivery/
 - https://aws.amazon.com/ko/blogs/aws/new-aws-codestar/
 - https://www.slideshare.net/awskr/ansible-cloudformation
 - https://www.slideshare.net/awskorea/aws-code-star-devops
