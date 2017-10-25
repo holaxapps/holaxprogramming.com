@@ -1,7 +1,7 @@
 ---
 title: unittest와 함께하는 파이썬 테스트
 date: 2017-06-17 15:24:49
-desc: 파이썬 시작하기 TDD부터 PyPI에 배포까지
+desc: 파이썬 TDD로 시작하기
 categories: python
 ---
 
