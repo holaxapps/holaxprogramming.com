@@ -2,6 +2,8 @@
 title: Git Flow 와 자주 사용하는 명령어들
 date: 2017-08-26 15:14:40
 desc: Git 시작하기
+profile: https://scontent-hkg3-1.xx.fbcdn.net/v/t1.0-9/22449744_1604324526273884_8642263448069374244_n.jpg?oh=899bd2996c0f4d2fcb9b6603ea96994c&oe=5AA370C4
+profile_url: https://www.facebook.com/minhyeok.jung
 categories: devops
 ---
 
