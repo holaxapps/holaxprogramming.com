@@ -262,8 +262,8 @@ $ git reset HEAD <file>
 
 HEAD에서 변경한 내역을 취소하는 새로운 commit을 발행하는 경우도 있다. 이미 commit, push 한 경우 드물게 사용한다.
 
-```
-$ git revert HEAD
+```bash
+$ git revert HEAD <file>
 ```
 
 #### remote 서버를 변경해야 할 때
@@ -285,9 +285,8 @@ origin  https://stunstunstun@github.com/stunstunstun/awesome-wiki (push)
 애플리케이션의 빌드 및 테스트가 완료되어 새 버전을 릴리즈한다면 읽기 전용 상태의 tag 버전를 생성하는 것이 좋다.
 
 ```bash
-$ git tag 0.1.0 1b2e1d63ff
+$ git tag 1.0.0
 ```
-위의 명령에서 1b2e1d63ff 부분은 꼬리표가 가리킬 확정본 식별자이다. 아래 명령으로 확정본 식별자를 얻을 수 있다.
 
 ```bash
 $ git log
@@ -317,3 +316,4 @@ $ git reset --hard origin/{branch_name}
 
 - https://rogerdudler.github.io/git-guide/index.ko.html
 - https://ujuc.github.io/2015/12/16/git-flow-github-flow-gitlab-flow/
+- https://github.com/k88hudson/git-flight-rules
