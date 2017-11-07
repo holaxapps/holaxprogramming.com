@@ -1,8 +1,4 @@
 #!/bin/bash
 
-pushd ./themes/chiangmai
-gulp &
-popd
-
 hexo clean && hexo generate
 hexo server

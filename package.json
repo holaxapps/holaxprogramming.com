@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "hexo": {
-    "version": "3.3.6"
+    "version": "3.4.0"
   },
   "dependencies": {
     "hexo": "^3.4.0",
@@ -22,6 +22,7 @@
     "hexo-tag-video": "^0.0.2"
   },
   "devDependencies": {
+    "eslint": "^4.10.0",
     "gulp": "^3.9.1"
   }
 }
