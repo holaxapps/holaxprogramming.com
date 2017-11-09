@@ -1,113 +1,70 @@
 ---
 title: 안녕 프로그래밍 소개
 date: 2017-03-03 18:04:11
-desc: 프로그래밍을 시작하는 작은 습관 상상하기
-image: http://images.mapsofworld.com/around-the-world/hello-around-the-world.jpg
+desc: 프로그래밍을 시작하는 작은 습관
+image: https://www.holaxprogramming.com/logo.png
 ---
 
-개인적으로 무엇인가를 꾸준히 한다는 것은 쉽지 않은 일이라고 생각해요. 새로운 공부를 하거나 새해가 시작되면 모든 사람들은 계획을 짜기 시작하죠. 스스로에게 동기부여를 하지만 처음부터 높은 목표치와 지속적으로 의지 할 곳이 없어 쉽게 포기하게 됩니다.
+## Why?
 
-<!--more-->
+다들 기술 관련 문서를 어떻게 관리 하시나요? 블로그는 엔지니어는 작성하기 불편하고, 사내에서 작성한 문서는 대부분 퇴사하면 사라지고.. 내 소중한 기록들 (..)
 
-<img src='https://cdn.dribbble.com/users/35381/screenshots/2109003/duda_6_loop.gif' width='500' />
+> 점점 어디론가 흩어져가고 있지 않으세요?
 
-> 그런데 말이죠, 무엇인가를 시작한다는 첫 걸음은 굉장히 위대한 일이라고 생각해요  
+<div align="center">
+  <img src='https://www.holaxprogramming.com/logo.png'/>
+</div>
 
-하지만 컴퓨터 공학을 전공하지 않고 이제 막 혼자 프로그래밍을 시작하시는 분들에게는 코딩 또는 프로그래밍이라는 키워드는 여전히 낯설고 어려운 존재인것 같더군요. 어디서부터 어떻게 시작해야 할지 모르는 외계어가 난무하는 그런 존재 말이에요, 저 역시 그랬어요—낯설고 어렵기만 하고 좀처럼 관심을 갖기가 힘들었어요, 전공을 잘못 선택한 것이 아닐까라는 생각도 했습니다.
 
-> 하지만 결론은 프로그래밍은 누구나 배울 수 있습니다.
+## 저자로 참여해주세요!
 
-이 글을 시작으로 프로그래밍에 관심이 있지만 어떻게 시작해야 될지 모르는 분들을 위해 천천히 따라해 볼 수 있는 프로그래밍 기초 강의를 연재해 볼까 합니다. 안녕 프로그래밍으로 이름을 지은 이 기초 강의를 통해 프로그래밍과 처음 인사하듯 가벼운 마음으로 시작해 보시길 바랍니다.
+✔️  위키 페이지를 통해서 문서에 대한 일관성을 유지하고 꾸준히 지속적으로 리마인드 하기 위해 만들었습니다.<br/>
+✔️  더욱 많은 분들에게 좋은 글이 전해지기를 바라면서, 기술 문서 작성에 관심이 있으신 분은 관심있게 읽어주세요.<br/>
+✔️  이렇게 쌓인 문서들이 자신은 물론이고 프로그래밍을 업으로 시작하는 주니어 엔지니어 스스로 성장하기 위한 좋은 자료가 되기를 바랍니다.<br/>
 
-## 안녕 프로그래밍의 목적은 단순해요
+## 주제
 
-<img src='http://images.mapsofworld.com/around-the-world/hello-around-the-world.jpg' width='500' />
+| 카테고리 | 설명 |
+| --- | --- |
+| [Fundamental](https://github.com/stunstunstun/awesome-wiki/tree/master/Fundamental) | 개발자에게 밑천이 되는 소프트웨어 공학 전반 |
+| [Python](https://github.com/stunstunstun/awesome-wiki/tree/master/Python)| Python 관련 카테고리 |
+| [Java](https://github.com/stunstunstun/awesome-wiki/tree/master/Java) | Java의 기본지식 및 Java8, Java9 Features |
+| [Front-end](https://github.com/stunstunstun/awesome-wiki/tree/master/Front-end) | JavaScript 및 프론트엔드 관련 기술 |
+| [Android](https://github.com/stunstunstun/awesome-wiki/tree/master/Android) | Android 관련 기술 |
+| [iOS](https://github.com/stunstunstun/awesome-wiki/tree/master/iOS) | Swift를 통한 iOS 개발에 관한 지식 |
+| [Spring Framework](https://github.com/stunstunstun/awesome-wiki/tree/master/Spring) | Java9, Spring Framework 5.0.0, Spring Boot 2.0, Gradle 4 |
+| [DevOps](https://github.com/stunstunstun/awesome-wiki/tree/master/DevOps) | 개발환경 및 인프라 운영에 대한 내용 |
+| [Git](https://github.com/stunstunstun/awesome-wiki/tree/master/Git) | Git에 대한 사용 경험과 그 밖의 협업도구에 대한 이야기 |
 
-- 프로그래밍을 처음 시작하시는 분들은 스스로 학습 할 수 있는 기초 체력을 만들 수 있습니다.
-- 강의노트와 포함된 동영상을 통해 학습하시면 프로그래밍을 다른 이에게 가르칠 수 있게 됩니다.
+> 추가가 필요한 카테고리는 이슈에 등록해주세요.
 
-#### 프로그래밍 관련 지식이 전혀 없어도 이해가 될까요?
+## 직접 참여하고 싶으시다구요?
 
-프로그래밍을 시작하기 두려운 이유를 저는 프로그래밍 수업이 대체로 어렵기 때문이라고 생각해요. 안녕 프로그래밍은 우리가 새로운 언어를 배울 때 Hello, Hola, Bonjour 와 같이 그 언어의 인사말부터 시작하듯이 가볍게 보실 수 있어요, 깊은 수학적 지식따위는 필요 없습니다. 프로그래밍에 대해 관심이 있지만 평소 용기가 나지 않으셨다면, 일단 시작해보시고 앞으로 강의노트를 보시면서 스스로 학습 할 수 있는 기초 체력을 만들 수 있기를 바랍니다. 물론 처음에 겁이 나죠, 하지만 그것은 비단 프로그래밍 뿐만은 아닐거예요.
+이 글에 공감하시는 모든 분이 참여가 가능해요. 작성하신 문서는 [`안녕 프로그래밍`](https://holaxprogramming.com)과 [페이스북 페이지](https://www.facebook.com/holaxprogramming/)에 포스팅 됩니다.
 
-> 그렇다면 어떻게 위대한 첫걸음을 지속하고 습관으로 이어 나아갈 수 있을까요?
+`위키 GitHub Repo`
+- https://github.com/stunstunstun/awesome-wiki
 
-## 왜(Why) 부터 시작하기
+`문서 작성하기`
+- Markdown 문서를 통해 작성해 주세요.
+- 문서의 이름은 주제에 맞는 카테고리 폴더에 `post-name.md`와 같이 영문 소문자와 '-'를 이용하여 생성하시면 됩니다.
+- PR(Pull Request)시에 글에 대한 간략한 소개를 첨부해주세요.
+- Markdown 문서의 상단에는 아래와 같은 형식으로 title(필수), date(필수), desc(Optional), category(Optional), profile(Optional), profile_url(Optional)을 포함해야 합니다.
 
-저 역시 영어 또는 새로운 언어를 공부하거나, 새로운 기술 등 무엇이 되었던 간에 관심있는 것들을 홀로 시작하게 되었을 때 **"습관"**이 되지 못한체 포기한 적이 많아요. 하지만 관심이 가는 것이 있다면 제 자신에게 질문하는 것을 시작으로 지속적인 동기부여가 필요하다고 생각합니다. 일단 Just Fucking Do It 말이죠.
+```
+---
+title: Java 시스템 운영 중 알아두면 쓸모 있는 지식들
+date: 2017-10-09 00:49:31
+categories: java
+desc: Java 제대로 이해하기
+profile: https://avatars0.githubusercontent.com/u/2571320?s=125&v=1
+profile_url: https://github.com/stunstunstun
+---
+```
 
-<img src='http://www.inspectorinsight.com/wp-content/uploads/2014/08/GoldenCircle-08April.013.jpg' width='500' />
+> Github Markdown Guide - https://guides.github.com/features/mastering-markdown/
 
-#### 먼저 그 시작으로 프로그래밍은 왜 배워야 할까요? 이 질문에 대해 함께 이 영상을 보는 것으로 시작했으면 좋겠어요
+## 유용한 Markdown Editor
 
-{% youtube SESuctdE9vM %}
-
-> Everybody in this country should learn how to program computer because it teach you how to think - Steve Jobs -
-
-어떤가요? 프로그래밍에 대해 조금은 흥미가 생기시나요? 프로그래밍을 시작하는 것으로 인해 새로운 가치를 만들어낸 명사 대부분이 이렇게 말하고 있어요.
-
-#### 프로그래밍을 통해 사고하는 방법을 배울 수 있다.
-
-새로운 언어를 배운다는 것은 새롭게 생각하고 사고하는 방식을 배우는 것과 같습니다. 서양의 언어와 동양의 언어 차이를 통해 동, 서양의 사고방식이 다르다는 학술적인 연구결과도 있어요. 최근에 개봉한 컨택트라는 영화에서는 이러한 주제를 심오하게 다루고 있기도 하죠.
-
-## 상상하기(What)
-
-더욱 구체적으로 이야기 해볼까요? 컴퓨터는 물론이고 인간만이 할 수 있는 한 가지 능력이 있습니다. 뭘까요?
-
-> 그것은 바로, 상상하기
-
-<img src="http://image.toast.com/aaaaahq/apps.png" width="500">
-
-우리는 무엇인가를 상상하는 것을 시작으로 실제를 만들어내죠. 우리에게 익숙한 예를 들어 볼께요. 바로 여러분 옆에 있는 아이폰 또는 안드로이드폰의 앱들을 살펴보면 모두 우리의 상상에서 부터 시작되었다는 것을 알 수 있습니다.
-
-- 암산하기 쉽지 않은데 쉽고 빠르게 계산할 수 있으면 어떨까?
-- 언제 어디서나 사람들과 소통할 수 있는 메신저같은 통로가 있으면 어떨까?
-
-이러한 상상을 시작으로 구체적으로 어떻게 실제로 만들어 낼까에 대한 방법(How)을 고민하게 됩니다. 여기서부터 우리는 지속적으로 문제에 노출됩니다. 프로그래밍 언어를 배우게 된다면 이러한 **문제를 효율적으로 해결하기 위한 사고방식**을 배울 수 있습니다.
-
-- 더욱 비판적으로 (critically)
-- 더욱 체계적으로 (methodically)
-- 마치 컴퓨터와 같이 문제 해결을 위해 사고하게 되죠. (computationlly)
-
-## 함께 방법(How) 고민하기
-
-최근에는 우리에게 친근한 Youtube 를 시작으로 Coursera, Udacity 등 MOCC를 통해 공학, 예술, 기초과학 그리고 비지니스까지 다양한 분야에서 입문자를 위한 훌륭한 강의 컨텐츠가 제공 되고 있습니다. 거기다 모두 무료예요 개이득-어떻게(How)?해야 할까에 대한 문제는 네트워크만 되는 환경이 있다면 쉽게 누구나 방법을 찾을 수 있게 되어 가고 있어요, 하지만 무엇인가를 혼자 지속적으로 해 나아간다는 것은 결코 쉬운일이 아니죠. 시간이 지날수록 의지력은 상실되고 큰 문제에 봉착하면 쉽게 포기하게 됩니다.
-
-<img src='http://blog.mapmyrun.com/wp-content/uploads/2017/02/How-to-Run-Together-Without-Breaking-Up.jpg' width='400' />
-
-#### 함께 고민하고 해결해 나간다면 어떨까요?
-
-특히 IT 분야에서는 이메일, 메신저를 시작으로 최근에는 Hangout, Slack, Github, Dropbox 등의 커뮤니케이션, 생산성 도구로 효율적으로 함께 문제를 해결해 나아가고 있어요. 프로그래밍을 시작하는 것도 작지만 첫 걸음부터 누군가와 함께 한다면 지속 가능한 `습관`을 만들수 있지 않을까요?
-
-#### `"그래서 말이죠, 같이 해봐요"`
-
-✔️  먼저 왜 하는가에 대해 항상 고민하세요.
-✔️  다음으로 방법보다는 무엇을 만들지 먼저 상상하세요.
-✔️  앞으로 업데이트 되는 `기초강의`와 `텍스트강의` 통해 프로그래밍에 대한 이해도를 높혀 나가세요.
-✔️  Github와 같은 커뮤니티 도구를 적극적으로 사용하세요. 서로 질문도 하고 함께 문제를 해결해봐요.
-
-## 안녕 프로그래밍의 강의는 아래와 같이 이루어집니다.
-
-#### 🎬  프로그래밍 기초 강의
-
-프로그래밍을 시작하시는 분들을 위한 기초강의를 업데이트하고 있습니다.
-
-- https://www.youtube.com/channel/UCdeU7rAkbmqjn_kZUn7fStQ
-
-#### 📄  텍스트 강의
-
-`알고리즘 기초`, `Java`, `Javascript`, `Python`, `웹 개발`, `DevOps`등 프로그래밍 전반의 내용을 블로그에서 텍스트로 전달합니다.
-
-- https://www.holaxprogramming.com/
-
-## 🗣  Join Us
-
-안녕 프로그래밍의 업데이트 내역을 페이스북 페이지에서 구독하세요
-
-> 페이스북 페이지 접속 후 좋아요 클릭 👍
-https://www.facebook.com/holaxprogramming/
-
-앞으로 소통하고 싶은 분들이 있으시다면 페이스북 그룹에서 함께해요. 아래의 링크를 통해 그룹 페이지에 접속하신 이후에 참여하시면 됩니다.
-
-> 안녕 프로그래밍 페이스북 그룹
-https://www.facebook.com/groups/holaxprogramming/
+- http://pad.haroopress.com/
+- https://yhatt.github.io/marp/
