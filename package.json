@@ -5,6 +5,9 @@
   "hexo": {
     "version": "3.4.0"
   },
+  "scripts": {
+    "deploy": "gulp sass && hexo clean && hexo generate -deploy"
+  },
   "dependencies": {
     "hexo": "^3.4.0",
     "hexo-browsersync": "^0.2.0",
@@ -23,6 +26,9 @@
   },
   "devDependencies": {
     "eslint": "^4.10.0",
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-pug": "^3.3.0"
   }
 }
