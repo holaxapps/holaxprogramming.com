@@ -9,4 +9,7 @@ gulp.task('sass', function() {
         .pipe(gulp.dest('./themes/chiangmai/source/css'));
 });
 
-gulp.task('default', ['sass']);
+gulp.task('default', ['sass'], function() {
+    gulp.watch('./themes/chiangmai/source/scss/*.scss', ['sass']);
+    gulp.watch('./themes/chiangmai/source/scss/_partial/*.scss', ['sass']);
+});
