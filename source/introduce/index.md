@@ -13,9 +13,9 @@ image: https://www.holaxprogramming.com/logo.png
   <img src='https://www.holaxprogramming.com/logo.png'/>
 </div>
 
-## 안녕프로그래밍의 저자들
+## 안녕 프로그래밍의 저자들
 
-<div class="post-info"><div class="post-info-profile"><a href="https://github.com/stunstunstun" target="_blank"><img src="https://www.holaxprogramming.com/image/profile.jpg" width="77"></a></div><div class="post-info-details"><div class="post-categories" style="top: 30px;"><a href="https://github.com/stunstunstun" target="_blank"><span>정민혁</span></a></div><div class="post-date">세계 곳곳을 돌아다니면 프로그래밍하기를 바라는 철부지입니다.</div></div></div>
+<div class="post-info"><div class="post-info-profile"><a href="https://github.com/stunstunstun" target="_blank"><img src="https://www.holaxprogramming.com/image/profile.jpg" width="77"></a></div><div class="post-info-details"><div class="post-categories" style="top: 30px;"><a href="https://github.com/stunstunstun" target="_blank"><span>정민혁</span></a></div><div class="post-date">Hola Programmers!</div></div></div>
 
 <div class="post-info"><div class="post-info-profile"><a href="https://github.com/ailrun" target="_blank"><img src="https://avatars3.githubusercontent.com/u/12473268?s=400&amp;u=3337a754192e339ee81bc1b4e8a9d223412c6f33&amp;v=4" width="77"></a></div><div class="post-info-details"><div class="post-categories" style="top: 30px;"><a href="https://github.com/ailrun" target="_blank"><span>Clare Jang</span></a></div><div class="post-date">Functional Programming 을 향한 산악가</div></div></div>
 
