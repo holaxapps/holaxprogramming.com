@@ -1,5 +1,5 @@
 ---
-title: Git Flow 와 자주 사용하는 명령어들
+title: Git Flow와 자주 사용하는 명령어들
 date: 2017-08-26 15:14:40
 desc: Git 시작하기
 categories: git
@@ -123,7 +123,7 @@ git은 강력한 점은 효율적으로 분산된 환경은 제공한다는 것�
 $ git checkout -b develop
 ```
 
-develop이라는 특정 branch로 부터 새로운 branch를 만들고 싶다면,
+stage라는 특정 branch로 부터 새로운 branch를 만들고 싶다면,
 
 ```bash
 $ git checkout -b develop origin/stage
@@ -178,14 +178,13 @@ $ git branch -a
 원격 저장소의 `develop`이라는 branch를 로컬 저장소에 가져오고 싶다면
 
 ````bash
-$ git checkout -t origin/1.0.0
-Branch 1.0.0 set up to track remote branch 1.0.0 from origin.
-Switched to a new branch '1.0.0'
+$ git checkout -t origin/develop
+Branch develop set up to track remote branch develop from origin.
+Switched to a new branch 'develop'
 $ git branch
-* 1.0.0
+* develop
   master
   stage
-  develop
 ````
 
 `fatal: Cannot update paths and switch to branch 'develop' at the same time.`이라는 에러가 발생한다면 아래와 같이 원격 저장소를 최신 상태를 로컬 저장소에 갱신한다.
@@ -202,7 +201,7 @@ $ git remote update
 $ git checkout <branch>
 ```
 
-아무런 옵션없이 원격 저장소의 branch를 checkout 하면 ‘detached HEAD’ 상태로 소스를 보고 변경 해볼 수도 있지만 변경사항들은 commit, push 할 수 없으며 다른 branch로 checkout하면 사라진다.
+아무런 옵션없이 원격 저장소의 branch를 checkout 하면 `detached HEAD` 상태로 소스를 보고 변경 해볼 수도 있지만 변경 사항들은 commit, push 할 수 없으며 다른 branch로 checkout하면 사라진다.
 
 #### 개발한 내역을 master branch에 merge하는 과정
 
@@ -357,6 +356,8 @@ $ git push origin 0.1.0
 ```
 
 지금까지 Git Flow를 통해 기본적인 명령들을 살펴보았다. Git에 대해 더 알고 싶다면 아래의 자료를 참고하면 많은 도움이 될 것이다!
+
+## References
 
 - [Git Flight Rules](https://github.com/k88hudson/git-flight-rules)
 - [An Introduction Git and GitHub](https://www.youtube.com/watch?v=MJUJ4wbFm_A)
