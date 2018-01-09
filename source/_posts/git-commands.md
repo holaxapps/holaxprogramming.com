@@ -1,17 +1,17 @@
 ---
-title: Git Flow와 자주 사용하는 명령어들
+title: Git Flow와 자주 사용되는 Git 명령어들
 date: 2017-08-26 15:14:40
 desc: Git 시작하기
 categories: git
 ---
 
-`Git Flow`는 git을 통해 효율적으로 프로젝트를 관리하기 위한 전략이다. 기본적으로 Git은 로컬 저장소와 원격 저장소간의 동기화를 위해 아래와 같은 과정을 거친다.
+`Git Flow`는 git을 통해 효율적으로 프로젝트를 관리하고 배포하기 위한 전략이다. 기본적으로 Git은 로컬 저장소와 원격 저장소간의 동기화를 위해 아래와 같은 과정을 거친다.
 
 <!--more-->
 
 <img src='https://about.gitlab.com/images/git_flow/four_stages.png' height='400' />
 
-하지만 프로젝트의 규모가 커지고 협업하는 동료들이 많이지면 저장소의 master branch 만 이용하는 것이 아니라 이슈에 따라 다양한 branch를 통해 독립적으로 개발이 가능한 전략이 필요하다.
+하지만 프로젝트의 규모가 커지고 협업하는 동료들이 많아진다면 저장소의 master branch만을 이용하는 것에서 이슈에 따라 다양한 branch를 통해 다양한 인원이 독립적으로 개발이 가능한 전략이 필요하다.
 
 ## Git Flow
 
@@ -249,7 +249,7 @@ int b = 2;
 ```
 
 ```
-$ git commit -am 'Fixed conflicted issue'
+$ git commit -a -m 'Conclude merge'
 ```
 
 > merge 전에 변경 내용을 확인하는 방법
@@ -323,20 +323,6 @@ $ git reset --hard a603da7
 $ git revert <commit_id>
 ```
 
-#### remote 서버를 변경해야 할 때
-
-git 저장소의 주소가 변경되는 등의 이슈로 인해 remote 서버를 변경해야 한다면 아래의 명령을 참고한다.
-
-```bash
-$ git remote -v
-origin  https://wjdsupj@github.com/wjdsupj/awesome-wiki (fetch)
-origin  https://wjdsupj@github.com/wjdsupj/awesome-wiki (push)
-$ git remote set-url origin https://stunstunstun@github.com/stunstunstun/awesome-wiki
-$ git remote -v
-origin  https://stunstunstun@github.com/stunstunstun/awesome-wiki (fetch)
-origin  https://stunstunstun@github.com/stunstunstun/awesome-wiki (push)
-```
-
 #### 최종 버전 릴리즈하기
 
 애플리케이션의 빌드 및 테스트가 완료되어 새 버전을 릴리즈한다면 읽기 전용 상태의 tag 버전를 생성하는 것이 좋다.
@@ -355,10 +341,139 @@ $ git log
 $ git push origin 0.1.0
 ```
 
+#### `gh-pages` 브랜치를 통해 정적 페이지 관리하기
+
+GitHub Repository를 운영하다 보면 비어 있는 브랜치를 생성해야할 때가 있다. REST API를 제공하는 프로젝트에서 자동으로 생성되는 API Documentation를 정적 페이지를 통해 제공하는 경우가 좋은 예이다.
+
+```bash
+$ cd /path/to/repo-name
+$ git symbolic-ref HEAD refs/heads/gh-pages
+$ rm .git/index
+$ git clean -fdx
+$ echo "My GitHub Page" > index.html
+$ git add .
+$ git commit -a -m "First pages commit"
+$ git push origin gh-pages
+```
+
+`git checkout -b gh-pages`를 통해 브랜치를 생성할 수도 있겠지만 이는 master 브랜치의 과거내역을 가지고 있음을 의미한다. 위와 같은 방법을 참고하면 `root branch`로 부터 과거 내역이 깔끔히 빈 새로운 브랜치를 생성할 수 있다.
+
+`gh-pages` 브랜치가 생성되면 아래의 경로를 통해서 정적 페이지에 접속할 수 있다.
+
+```
+http://<username>.github.io/<projectname>
+```
+
+
+> https://gist.github.com/ramnathv/2227408
+
+#### remote 서버를 변경해야 할 때
+
+git 저장소의 주소가 변경되는 등의 이슈로 인해 remote 서버를 변경해야 한다면 아래의 명령을 참고한다.
+
+```bash
+$ git remote -v
+origin  https://wjdsupj@github.com/wjdsupj/awesome-wiki (fetch)
+origin  https://wjdsupj@github.com/wjdsupj/awesome-wiki (push)
+$ git remote set-url origin https://stunstunstun@github.com/stunstunstun/awesome-wiki
+$ git remote -v
+origin  https://stunstunstun@github.com/stunstunstun/awesome-wiki (fetch)
+origin  https://stunstunstun@github.com/stunstunstun/awesome-wiki (push)
+```
+
+## GitHub의 오픈소스에 기여하기
+
+GitHub에는 다양한 오픈소스들이 존재하고 경우에 따라서는 직접 참여해 관심있는 오픈소스에 기여할 수도 있다. 이를 위해서는 먼저 오픈소스의 Repository를 아래의 Fork 버튼을 통해 자신의 계정에 추가해야 한다.
+
+<img src='https://help.github.com/assets/images/help/repository/fork_button.jpg' />
+
+#### Fork한 Repository clone 하기
+
+```bash
+$ git clone https://github.com/YOUR-USERNAME/jest
+```
+
+#### Fork를 위한 remote 설정하기
+
+Fork한 Repository를 앞으로 자신의 Repository와 동기화하기 위해서는 아래와 같이 `upstream` remote를 추가한다.
+
+```bash
+$ git remote -v
+origin	https://github.com/stunstunstun/jest (fetch)
+origin	https://github.com/stunstunstun/jest (push)
+$ git remote add upstream https://github.com/facebook/jest
+$ git remote -v
+origin	https://github.com/stunstunstun/jest (fetch)
+origin	https://github.com/stunstunstun/jest (push)
+upstream	https://github.com/facebook/jest (fetch)
+upstream	https://github.com/facebook/jest (push)
+```
+
+#### Fork와 동기화하기
+
+아래와 같은 명령순으로 원본 Repository에서 merge할 수 있다.
+
+```bash
+$ git fetch upstream
+remote: Counting objects: 63, done.
+remote: Compressing objects: 100% (12/12), done.
+remote: Total 63 (delta 46), reused 51 (delta 45), pack-reused 6
+Unpacking objects: 100% (63/63), done.
+From https://github.com/facebook/jest
+ * [new branch]        ericnakagawa-add-romanian -> upstream/ericnakagawa-add-romanian
+ * [new branch]        gh-pages                  -> upstream/gh-pages
+ * [new branch]        master                    -> upstream/master
+$ git checkout master
+Your branch is up-to-date with 'origin/master'.
+$ git merge upstream/master
+Updating 5a378915..4f685d88
+Fast-forward
+ CHANGELOG.md                                                   |   34 ++-
+ docs/GlobalAPI.md                                              |   14 +-
+ examples/react-native/package.json                             |    2 +-
+ integration_tests/__tests__/__snapshots__/globals.test.js.snap |   17 ++
+ integration_tests/__tests__/globals.test.js                    |   18 ++
+ integration_tests/__tests__/jasmine_async.test.js              |    6 +
+ integration_tests/jasmine_async/__tests__/generator.test.js    |   25 ++
+ package.json                                                   |   10 +-
+ packages/jest-jasmine2/package.json                            |    2 +
+ packages/jest-jasmine2/src/jasmine/Suite.js                    |   29 +-
+ packages/jest-jasmine2/src/jasmine_async.js                    |    9 +-
+ scripts/browserBuild.js                                        |    4 +-
+ types/Circus.js                                                |    2 +-
+ yarn.lock                                                      | 1126 ++++++++++++++++++++++++++++++++++++++++++++++++++---------------------
+ 14 files changed, 954 insertions(+), 344 deletions(-)
+ create mode 100644 integration_tests/jasmine_async/__tests__/generator.test.js
+```
+
+## git config
+
+이 명령을 통해서는 로컬에서 참고하는 다양한 옵션을 설정한다. 예를 들면 Git Repository에서 참조하는 계정을 아래와 같이 설정할 수 있다.
+
+`global`
+
+```
+$ git config --global user.name "stunstunstun"
+$ git config --global user.email "wjdsupj@gmail.com"
+```
+
+`local`
+
+```
+$ git config --local user.name "stunstunstun"
+$ git config --local user.email "wjdsupj@gmail.com"
+```
+
+> https://git-scm.com/docs/git-config
+ 
+
+## 마치며
+
 지금까지 Git Flow를 통해 기본적인 명령들을 살펴보았다. Git에 대해 더 알고 싶다면 아래의 자료를 참고하면 많은 도움이 될 것이다!
 
 ## References
 
+- [Git Docs](https://git-scm.com/docs/)
 - [Git Flight Rules](https://github.com/k88hudson/git-flight-rules)
 - [An Introduction Git and GitHub](https://www.youtube.com/watch?v=MJUJ4wbFm_A)
 - [Git Basic Tutorials](https://try.github.io)

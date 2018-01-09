@@ -1,25 +1,23 @@
 ---
-title: Github Pages와 Hexo를 통해 30분만에 기술 블로그 만들기
+title: Github Page와 Hexo를 통해 30분만에 기술 블로그 만들기
 date: 2017-04-16 15:14:40
-desc: 자신의 기술 블로그를 만들어 보는 것 어떠세요?
-image: http://www.ybrikman.com/assets/img/blog/github-pages/github-pages.png
-categories: devops
+categories: git
 ---
 
-이 포스팅에서는 GitHub Pages를 통해 손쉽게 개발 블로그를 Hosting 해보고 Command Line 명령을 통해 쉽게 블로그를 만들 수 있는 Hexo 프레임워크를 소개하고자 합니다.
+이 포스팅에서는 GitHub Page를 통해 손쉽게 개발 블로그를 Hosting 해보고 Command Line 명령을 통해 쉽게 블로그를 만들 수 있는 Hexo 프레임워크를 소개하고자 합니다.
 
 <!--more-->
 
-<img src='http://www.ybrikman.com/assets/img/blog/github-pages/github-pages.png' width='600' />
+<img src='http://www.ybrikman.com/assets/img/blog/github-pages/github-pages.png' width='500' />
 
 - GitHub Page - https://pages.github.com/
 - Hexo - https://hexo.io/
 
-지금 보고 계시는 블로그 역시 동일한 방법으로 30분 이내에 블로그를 개설 할 수 있었습니다. Github Pages와 Hexo를 통해 개인의 기술 관련 문서를 손쉽게 관리하고 알릴 수 있기를 바랍니다.
+지금 보고 계시는 블로그 역시 동일한 방법으로 30분 이내에 블로그를 개설 할 수 있었습니다. Git Page와 Hexo를 통해 개인의 기술 관련 문서를 손쉽게 관리하고 알릴 수 있기를 바랍니다.
 
-## Github Pages로 정적 페이지 Hosting하기
+## Git Page로 정적 페이지 Hosting하기
 
-Github Pages를 통해 손쉽게 USERNAME.github.io 도메인을 통해 정적 페이지를 호스팅(Hosting) 할 수가 있습니다.
+Git Page를 통해 손쉽게 USERNAME.github.io 도메인을 통해 정적 페이지를 호스팅(Hosting) 할 수가 있습니다.
 
 #### Github Repository 생성하기
 
@@ -119,7 +117,7 @@ permalink_defaults:
 
 #### Github 정보
 
-자신의 Repository 정보를 입력하면 이후에 손쉽게 배포가 가능하다.
+자신의 Git Page의 Repository 정보를 입력하면 이후에 손쉽게 배포가 가능하다.
 
 ```yml
 # Deployment
@@ -212,7 +210,7 @@ $ hexo new post github-page-and-hexo
           - github-page-and-hexo.md
 ```
 
-**생성된 Markdown 문서에서 아래와 같이 제목을 수정 할 수 있다**
+**github-page-and-hexo.md 에서 아래와 같이 포스트의 제목을 수정 할 수 있다**
 
 ```md
 ---
@@ -223,15 +221,13 @@ date: 2017-04-16 22:37:53
 
 #### Github Markdown Guide
 
-Markdown 문서가 생소하다면 아래의 링크를 참고한다.
+Markdown 문서가 생소하다면 아래의 링크를 확인하자
 
 > https://guides.github.com/features/mastering-markdown/
 
 ## 체크리스트
 
-<div class='tip'>
-  지금까지 GitHub Page와 Hexo를 통해서 블로그를 개설하는 과정을 살펴보았는데요, 이 과정에서 소소한 시행 착오를 겪었습니다. 만약 저와 같은 동일한 이슈가 재현이 됐을 때의 해결 방법을 안내하는 것을 마지막으로 이 글을 마치도록 할께요.
-</div>
+지금까지 GitHub Page와 Hexo를 통해서 블로그를 개설하는 과정을 살펴보았는데요, 이 과정에서 소소한 시행 착오를 겪었습니다. 만약 저와 같은 동일한 이슈가 재현이 됐을 때의 해결 방법을 안내하는 것을 마지막으로 이 글을 마치도록 할께요.
 
 #### Theme를 변경하고 배포시에 적용이 되지 않는 이슈
 
