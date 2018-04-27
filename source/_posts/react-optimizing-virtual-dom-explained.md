@@ -1,13 +1,11 @@
 ---
-title: [번역] React 최적화: 가상 DOM에 대하여
+title: React 최적화 - 가상 DOM에 대하여
 date: 2018-04-15 13:42:00
 categories: JavaScript
 desc: 가상 DOM과 React 최적화 방식에 대해 알아봅니다.
 profile: https://avatars1.githubusercontent.com/u/17661000?s=460&v=4
 profile_url: https://github.com/gratiaa
 ---
-
-# [번역] React 최적화: 가상 DOM에 대하여
 
 * 원문: [https://evilmartians.com/chronicles/optimizing-react-virtual-dom-explained](https://evilmartians.com/chronicles/optimizing-react-virtual-dom-explained)
 
