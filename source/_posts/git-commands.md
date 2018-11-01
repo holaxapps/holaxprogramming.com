@@ -1,6 +1,6 @@
 ---
 title: Git Flow와 자주 사용되는 Git 명령어들
-date: 2017-08-26 15:14:40
+date: 2018-11-01 15:14:40
 desc: Git 시작하기
 categories: git
 ---
@@ -367,6 +367,8 @@ http://<username>.github.io/<projectname>
 
 > https://gist.github.com/ramnathv/2227408
 
+## remote branch 참조와 업데이트
+
 #### remote 서버를 변경해야 할 때
 
 git 저장소의 주소가 변경되는 등의 이슈로 인해 remote 서버를 변경해야 한다면 아래의 명령을 참고한다.
@@ -380,6 +382,28 @@ $ git remote -v
 origin  https://stunstunstun@github.com/stunstunstun/awesome-wiki (fetch)
 origin  https://stunstunstun@github.com/stunstunstun/awesome-wiki (push)
 ```
+
+#### remote branch 상태 보기
+
+```
+$ git remote show origin
+```
+
+#### git fetch
+
+로컬 저장소를 리모트 저장소와 동기화하고, 자동적으로 더이상 유효하지 않은 branch 참조를 제거한다.
+
+```
+$ git fetch origin --prune
+```
+
+#### git remote
+
+```bash
+$ git remote update --prune  # Only prune, don't fetch
+```
+
+
 
 ## GitHub의 오픈소스에 기여하기
 
