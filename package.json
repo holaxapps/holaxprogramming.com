@@ -8,6 +8,7 @@
   "scripts": {
     "sass": "gulp sass",
     "watch": "gulp",
+    "build": "hexo generate",
     "start": "yarn watch & hexo clean && hexo generate && hexo server",
     "deploy": "yarn sass && hexo clean && hexo generate -deploy"
   },
